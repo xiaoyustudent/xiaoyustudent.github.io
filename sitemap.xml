@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://xiaoyustudent.github.io/posts/16079/</loc>
+    
+    <lastmod>2023-02-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://xiaoyustudent.github.io/posts/46812/</loc>
     
     <lastmod>2023-01-27</lastmod>
@@ -67,7 +76,7 @@
 
   <url>
     <loc>https://xiaoyustudent.github.io/</loc>
-    <lastmod>2023-01-27</lastmod>
+    <lastmod>2023-02-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -75,14 +84,14 @@
   
   <url>
     <loc>https://xiaoyustudent.github.io/tags/hexo/</loc>
-    <lastmod>2023-01-27</lastmod>
+    <lastmod>2023-02-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://xiaoyustudent.github.io/tags/%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2023-01-27</lastmod>
+    <lastmod>2023-02-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -91,14 +100,21 @@
   
   <url>
     <loc>https://xiaoyustudent.github.io/categories/%E5%8D%9A%E5%AE%A2/</loc>
-    <lastmod>2023-01-27</lastmod>
+    <lastmod>2023-02-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://xiaoyustudent.github.io/categories/Golang/</loc>
-    <lastmod>2023-01-27</lastmod>
+    <lastmod>2023-02-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://xiaoyustudent.github.io/categories/%E6%97%A5%E8%AE%B0/</loc>
+    <lastmod>2023-02-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
