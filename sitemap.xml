@@ -11,6 +11,24 @@
   </url>
   
   <url>
+    <loc>https://xiaoyustudent.github.io/posts/42474/</loc>
+    
+    <lastmod>2023-02-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://xiaoyustudent.github.io/posts/949/</loc>
+    
+    <lastmod>2023-02-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://xiaoyustudent.github.io/posts/46812/</loc>
     
     <lastmod>2023-02-05</lastmod>
@@ -123,6 +141,13 @@
   
   <url>
     <loc>https://xiaoyustudent.github.io/categories/%E6%97%A5%E8%AE%B0/</loc>
+    <lastmod>2023-02-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://xiaoyustudent.github.io/categories/%E6%91%98%E5%BD%95/</loc>
     <lastmod>2023-02-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
