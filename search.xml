@@ -23,24 +23,11 @@
     
     
     <entry>
-      <title>我的喜欢歌单</title>
-      <link href="/posts/949/"/>
-      <url>/posts/949/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>欢迎来到小兰（小昱）的听歌房，在这里有我们喜欢的音乐</p>        <div id="aplayer-NXHZRSSx" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>  <script>  var options = {"narrow":false,"autoplay":false,"showlrc":0,"music":[{"title":"windy hill","author":"羽肿","url":"/posts/949/windyhill.mp3","pic":"/posts/949/windyhill.jpg","lrc":"windyhill.txt"},{"title":"所念皆星河","author":"CMJ","url":"/posts/949/所念皆星河.mp3","pic":"/posts/949/所念皆星河.jpg","lrc":"所念皆星河.txt"}]};  options.element = document.getElementById("aplayer-NXHZRSSx");  var ap = new APlayer(options);    window.aplayers || (window.aplayers = []);  window.aplayers.push(ap);  </script>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>喜欢的歌单</title>
       <link href="/posts/949/"/>
       <url>/posts/949/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>欢迎来到小兰（小昱）的听歌房，在这里有我们喜欢的音乐</p>        <div id="aplayer-SeJMTpyo" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>  <script>  var options = {"narrow":false,"autoplay":false,"showlrc":0,"music":[{"title":"windy hill","author":"羽肿","url":"/posts/949/windyhill.mp3","pic":"/posts/949/windyhill.jpg","lrc":"windyhill.txt"},{"title":"所念皆星河","author":"CMJ","url":"/posts/949/所念皆星河.mp3","pic":"/posts/949/所念皆星河.jpg","lrc":"所念皆星河.txt"}]};  options.element = document.getElementById("aplayer-SeJMTpyo");  var ap = new APlayer(options);    window.aplayers || (window.aplayers = []);  window.aplayers.push(ap);  </script>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>欢迎来到小兰（小昱）的听歌房，在这里有我们喜欢的音乐</p>        <div id="aplayer-fAlhJkso" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>  <script>  var options = {"narrow":false,"autoplay":false,"showlrc":0,"music":[{"title":"windy hill","author":"羽肿","url":"/posts/949/windyhill.mp3","pic":"/posts/949/windyhill.jpg","lrc":"windyhill.txt"},{"title":"所念皆星河","author":"CMJ","url":"/posts/949/所念皆星河.mp3","pic":"/posts/949/所念皆星河.jpg","lrc":"所念皆星河.txt"}]};  options.element = document.getElementById("aplayer-fAlhJkso");  var ap = new APlayer(options);    window.aplayers || (window.aplayers = []);  window.aplayers.push(ap);  </script>]]></content>
       
       
       <categories>
