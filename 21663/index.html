@@ -16,18 +16,18 @@
   <meta name="description" content="Viviva是一个hexo的主题模板，在主题的github仓库中，有关于缩略图和头图的代码，但是没有具体的操作方法，所以这里记录一下。当然也希望作者能够加快更新，这个主题真的特别好看 准备首先，这个主题主要是ejs的语法，大致上和js差不多，这里不做赘述，直接上代码。这里要找到两个文件，首页的文件和文章页的文件，这两个文件在主题的layout文件夹和该文件夹下的post文件夹中，分别是articl">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo-vivia的缩略图以及头图添加方法">
-<meta property="og:url" content="http://example.com/2023/07/31/hexo-vivia%E7%9A%84%E7%BC%A9%E7%95%A5%E5%9B%BE%E4%BB%A5%E5%8F%8A%E5%A4%B4%E5%9B%BE%E6%B7%BB%E5%8A%A0%E6%96%B9%E6%B3%95/index.html">
+<meta property="og:url" content="http://example.com/21663/index.html">
 <meta property="og:site_name" content="村长家的树">
 <meta property="og:description" content="Viviva是一个hexo的主题模板，在主题的github仓库中，有关于缩略图和头图的代码，但是没有具体的操作方法，所以这里记录一下。当然也希望作者能够加快更新，这个主题真的特别好看 准备首先，这个主题主要是ejs的语法，大致上和js差不多，这里不做赘述，直接上代码。这里要找到两个文件，首页的文件和文章页的文件，这两个文件在主题的layout文件夹和该文件夹下的post文件夹中，分别是articl">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/2023/07/31/hexo-vivia%E7%9A%84%E7%BC%A9%E7%95%A5%E5%9B%BE%E4%BB%A5%E5%8F%8A%E5%A4%B4%E5%9B%BE%E6%B7%BB%E5%8A%A0%E6%96%B9%E6%B3%95/banner.png">
+<meta property="og:image" content="http://example.com/21663/banner.png">
 <meta property="article:published_time" content="2023-07-31T10:11:19.000Z">
-<meta property="article:modified_time" content="2023-08-01T02:56:50.906Z">
+<meta property="article:modified_time" content="2023-08-01T06:05:59.654Z">
 <meta property="article:author" content="小昱">
 <meta property="article:tag" content="Hexo">
 <meta property="article:tag" content="Viviva">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2023/07/31/hexo-vivia%E7%9A%84%E7%BC%A9%E7%95%A5%E5%9B%BE%E4%BB%A5%E5%8F%8A%E5%A4%B4%E5%9B%BE%E6%B7%BB%E5%8A%A0%E6%96%B9%E6%B3%95/banner.png">
+<meta name="twitter:image" content="http://example.com/21663/banner.png">
   
   
     <link rel="icon" media="(prefers-color-scheme: light)" href="/images/favicon-light-32.png" sizes="32x32">
@@ -42,7 +42,7 @@
   
 <link rel="stylesheet" href="/css/style.css">
 
-<meta name="generator" content="Hexo 5.4.2"></head>
+<meta name="generator" content="Hexo 5.4.2"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 <body>
   
@@ -52,12 +52,6 @@
       <navbar id="navbar">
   <nav id="title-nav">
     <a href="/">
-      <div id="vivia-logo">
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-      </div>
       <div>村长家的树 </div>
     </a>
   </nav>
@@ -150,7 +144,7 @@
   <div class="widget-wrap">
     <div class="widget">
       <h3 class="widget-title">标签</h3>
-      <ul class="widget-tag-list" itemprop="keywords"><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Viviva/" rel="tag">Viviva</a></li></ul>
+      <ul class="widget-tag-list" itemprop="keywords"><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Viviva/" rel="tag">Viviva</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E6%96%87%E6%A1%A3/" rel="tag">文档</a></li></ul>
     </div>
   </div>
 
@@ -161,6 +155,11 @@
     <div class="widget">
       <h3 class="widget-title">归档</h3>
       
+      
+        <a class="archive-link" href="/archives/2023/08 ">
+          八月 2023 
+          <div class="archive-count">1 </div>
+        </a>
       
         <a class="archive-link" href="/archives/2023/07 ">
           七月 2023 
@@ -178,7 +177,13 @@
       <h3 class="widget-title">最新文章</h3>
       <ul>
         
-          <a class="recent-link" href="/2023/07/31/hexo-vivia%E7%9A%84%E7%BC%A9%E7%95%A5%E5%9B%BE%E4%BB%A5%E5%8F%8A%E5%A4%B4%E5%9B%BE%E6%B7%BB%E5%8A%A0%E6%96%B9%E6%B3%95/" title="hexo-vivia的缩略图以及头图添加方法" >
+          <a class="recent-link" href="/29786/" title="邮件群发模板文档" >
+            <div class="recent-link-text">
+              邮件群发模板文档
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/21663/" title="hexo-vivia的缩略图以及头图添加方法" >
             <div class="recent-link-text">
               hexo-vivia的缩略图以及头图添加方法
             </div>
@@ -201,14 +206,9 @@
 <div class="article-gallery">
   <div class="article-gallery-photos">
     
-      <a class="article-gallery-img" rel="gallery_clkrr1p7c0001m0w6dpou8631">
+      <a class="article-gallery-img" rel="gallery_clktr5pg00001u8eh3kuh7xkp">
         
-        
-        
-        
-        
-        
-        <img src="/2023/07/31/hexo-vivia%E7%9A%84%E7%BC%A9%E7%95%A5%E5%9B%BE%E4%BB%A5%E5%8F%8A%E5%A4%B4%E5%9B%BE%E6%B7%BB%E5%8A%A0%E6%96%B9%E6%B3%95/banner.png" itemprop="image">
+        <img src="/21663/banner.png" itemprop="image">
       </a>
     
   </div>
@@ -243,7 +243,7 @@
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            717 词 
+            699 词 
           </div>
         </div>
         
@@ -255,8 +255,13 @@
           <p>Viviva是一个hexo的主题模板，在主题的github仓库中，有关于缩略图和头图的代码，但是没有具体的操作方法，所以这里记录一下。当然也希望作者能够加快更新，这个主题真的特别好看</p>
 <h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>首先，这个主题主要是ejs的语法，大致上和js差不多，这里不做赘述，直接上代码。这里要找到两个文件，首页的文件和文章页的文件，这两个文件在主题的<code>layout</code>文件夹和该文件夹下的<code>post</code>文件夹中，分别是<code>article.ejs</code>和<code>gallery.ejs</code>。</p>
 <h2 id="相关代码"><a href="#相关代码" class="headerlink" title="相关代码"></a>相关代码</h2><p>这里两个文件夹中所用到的代码都是基本相同的，获取图片的路径是<code>/2023/07/31/title/banner.png</code>，其中除了最后的<code>banner.png</code>是固定的（当然也不用固定），前面都可以用代码自动获取</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;% <span class="keyword">let</span> date = <span class="keyword">new</span> <span class="title class_">Date</span>(post.<span class="property">date</span>) %&gt;</span><br><span class="line">&lt;% <span class="keyword">let</span> year =  date.<span class="title function_">getFullYear</span>() %&gt;</span><br><span class="line">&lt;% <span class="keyword">let</span> month = <span class="title class_">String</span>(date.<span class="title function_">getMonth</span>() + <span class="number">1</span>).<span class="title function_">padStart</span>(<span class="number">2</span>, <span class="string">&#x27;0&#x27;</span>) %&gt;</span><br><span class="line">&lt;% <span class="keyword">let</span> day = <span class="title class_">String</span>(date.<span class="title function_">getDate</span>()).<span class="title function_">padStart</span>(<span class="number">2</span>, <span class="string">&#x27;0&#x27;</span>) %&gt;</span><br><span class="line">&lt;% <span class="keyword">let</span> formattedDate = year + <span class="string">&#x27;/&#x27;</span> + month + <span class="string">&#x27;/&#x27;</span> + day + <span class="string">&#x27;/&#x27;</span> %&gt;</span><br><span class="line">&lt;% <span class="keyword">let</span> newPhoto = formattedDate + post.<span class="property">title</span> + <span class="string">&#x27;/&#x27;</span> + photo %&gt;</span><br></pre></td></tr></table></figure>
-
+<pre class=" language-js"><code class="language-js">    <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">let</span> date <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span>post<span class="token punctuation">.</span>date<span class="token punctuation">)</span> <span class="token operator">%</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">let</span> year <span class="token operator">=</span>  date<span class="token punctuation">.</span><span class="token function">getFullYear</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">let</span> month <span class="token operator">=</span> <span class="token function">String</span><span class="token punctuation">(</span>date<span class="token punctuation">.</span><span class="token function">getMonth</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">padStart</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">'0'</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">let</span> day <span class="token operator">=</span> <span class="token function">String</span><span class="token punctuation">(</span>date<span class="token punctuation">.</span><span class="token function">getDate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">padStart</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">'0'</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">let</span> formattedDate <span class="token operator">=</span> year <span class="token operator">+</span> <span class="token string">'/'</span> <span class="token operator">+</span> month <span class="token operator">+</span> <span class="token string">'/'</span> <span class="token operator">+</span> day <span class="token operator">+</span> <span class="token string">'/'</span> <span class="token operator">%</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">let</span> newPhoto <span class="token operator">=</span> formattedDate <span class="token operator">+</span> post<span class="token punctuation">.</span>title <span class="token operator">+</span> <span class="token string">'/'</span> <span class="token operator">+</span> photo <span class="token operator">%</span><span class="token operator">></span>
+</code></pre>
 <h2 id="article-ejs修改的位置"><a href="#article-ejs修改的位置" class="headerlink" title="article.ejs修改的位置"></a>article.ejs修改的位置</h2><p><img src="article.png" alt="article.ejs中修改的位置"></p>
 <h2 id="gallery-ejs修改的位置"><a href="#gallery-ejs修改的位置" class="headerlink" title="gallery.ejs修改的位置"></a>gallery.ejs修改的位置</h2><p><img src="gallery.png" alt="gallery.ejs中修改的位置"></p>
 
@@ -270,6 +275,29 @@
   </div>
   
     
+<nav id="article-nav">
+  <a class="article-nav-btn left "
+    
+      href="/29786/"
+      title="邮件群发模板文档"
+     >
+    <i class="fa-solid fa-angle-left"></i>
+    <p class="title-text">
+      
+        邮件群发模板文档
+        
+    </p>
+  </a>
+  <a class="article-nav-btn right  disabled "
+     >
+
+    <p class="title-text">
+        
+    </p>
+    <i class="fa-solid fa-angle-right"></i>
+  </a>
+</nav>
+
 
   
 </article>
