@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+
+
+<html theme="dark" showBanner="true" hasBanner="false" > 
+<link href="/fontawesome/css/fontawesome.css" rel="stylesheet">
+<link href="/fontawesome/css/brands.css" rel="stylesheet">
+<link href="/fontawesome/css/solid.css" rel="stylesheet">
+<script src="/js/color.global.min.js" ></script>
+<script src="/js/load-settings.js" ></script>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>linux安装mysql文档 | 村长家的树</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="前期准备工作 下载ssh远程连接工具 云服务器更改密码 远程服务器使用此账号密码登录（默认不是root账密） 进入界面后输入sudo passwd更改root密码，连续输入两次回车即可 不建议远程连接的账密为root账密，因为root权限过大，容易造成服务器被入侵     云服务器为腾讯云，操作系统版本为Ubuntu18.04  服务器相关配置这里我是切换了root用户，后续操作都在root下进行">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux安装mysql文档">
+<meta property="og:url" content="http://example.com/40090/index.html">
+<meta property="og:site_name" content="村长家的树">
+<meta property="og:description" content="前期准备工作 下载ssh远程连接工具 云服务器更改密码 远程服务器使用此账号密码登录（默认不是root账密） 进入界面后输入sudo passwd更改root密码，连续输入两次回车即可 不建议远程连接的账密为root账密，因为root权限过大，容易造成服务器被入侵     云服务器为腾讯云，操作系统版本为Ubuntu18.04  服务器相关配置这里我是切换了root用户，后续操作都在root下进行">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/40090/mysql-rpm.PNG">
+<meta property="og:image" content="http://example.com/40090/mysql%E8%BF%90%E8%A1%8C.PNG">
+<meta property="og:image" content="http://example.com/40090/mysql%E8%BF%9E%E6%8E%A5.PNG">
+<meta property="og:image" content="http://example.com/40090/%E6%B7%BB%E5%8A%A0%E8%A7%84%E5%88%99.PNG">
+<meta property="og:image" content="http://example.com/40090/%E6%B7%BB%E5%8A%A0%E8%A7%84%E5%88%99%E8%BE%93%E5%85%A5%E5%8F%82%E6%95%B0.PNG">
+<meta property="og:image" content="http://example.com/40090/user%E8%A1%A8.PNG">
+<meta property="og:image" content="http://example.com/40090/%E6%9F%A5%E7%9C%8B%E7%AB%AF%E5%8F%A3%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90.PNG">
+<meta property="og:image" content="http://example.com/40090/%E4%BF%AE%E6%94%B9bind-address.PNG">
+<meta property="og:image" content="http://example.com/40090/%E8%BF%9E%E6%8E%A5%E6%88%90%E5%8A%9F.PNG">
+<meta property="article:published_time" content="2023-08-08T12:26:19.000Z">
+<meta property="article:modified_time" content="2023-08-08T12:26:34.159Z">
+<meta property="article:author" content="小昱">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="Mysql">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/40090/mysql-rpm.PNG">
+  
+  
+    <link rel="icon" media="(prefers-color-scheme: light)" href="/images/favicon-light-32.png" sizes="32x32">
+    <link rel="icon" media="(prefers-color-scheme: light)" href="/images/favicon-light-128.png" sizes="128x128">
+    <link rel="icon" media="(prefers-color-scheme: light)" href="/images/favicon-light-180.png" sizes="180x180">
+    <link rel="icon" media="(prefers-color-scheme: light)" href="/images/favicon-light-192.png" sizes="192x192">
+    <link rel="icon" media="(prefers-color-scheme: dark)" href="/images/favicon-dark-32.png" sizes="32x32">
+    <link rel="icon" media="(prefers-color-scheme: dark)" href="/images/favicon-dark-128.png" sizes="128x128">
+    <link rel="icon" media="(prefers-color-scheme: dark)" href="/images/favicon-dark-180.png" sizes="180x180">
+    <link rel="icon" media="(prefers-color-scheme: dark)" href="/images/favicon-dark-192.png" sizes="192x192">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.2"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+<body>
+  
+   
+  <div id="main-grid" class="shadow   ">
+    <div id="nav" class=""  >
+      <navbar id="navbar">
+  <nav id="title-nav">
+    <a href="/">
+      <div>村长家的树 </div>
+    </a>
+  </nav>
+  <nav id="main-nav">
+    
+      <a class="main-nav-link" href="/">首页</a>
+    
+      <a class="main-nav-link" href="/archives">归档</a>
+    
+      <a class="main-nav-link" href="/about">关于</a>
+    
+  </nav>
+  <nav id="sub-nav">
+    <a id="theme-btn" class="nav-icon">
+      <span class="material-symbols-rounded light-mode-icon">wb_sunny</span>
+      <span class="material-symbols-rounded dark-mode-icon">dark_mode</span>
+    </a>
+    
+    <a id="nav-search-btn" class="nav-icon" title="搜索" style="display: none;">
+      <span class="material-symbols-rounded">search</span>
+    </a>
+    <div id="nav-menu-btn" class="nav-icon">
+      <span class="material-symbols-rounded">menu</span>
+    </div>
+  </nav>
+</navbar>
+<div id="nav-dropdown" class="hidden">
+  <div id="dropdown-link-list">
+    
+      <a class="nav-dropdown-link" href="/">首页</a>
+    
+      <a class="nav-dropdown-link" href="/archives">归档</a>
+    
+      <a class="nav-dropdown-link" href="/about">关于</a>
+    
+     
+    </div>
+</div>
+<script>
+  let dropdownBtn = document.getElementById("nav-menu-btn");
+  let dropdownEle = document.getElementById("nav-dropdown");
+  dropdownBtn.onclick = function() {
+    dropdownEle.classList.toggle("hidden");
+  }
+</script>
+    </div>
+    <div id="sidebar-wrapper">
+      <sidebar id="sidebar">
+  
+    <div class="widget-wrap">
+  <div class="info-card">
+    <div class="avatar">
+      
+      <div class="img-dim"></div>
+    </div>
+    <div class="info">
+      <div class="username">小昱 </div>
+      <div class="dot"></div>
+      <div class="subtitle">记录每个点滴 </div>
+      <div class="link-list">
+        
+          <a class="link-btn" target="_blank" rel="noopener" href="https://wpa.qq.com/msgrd?v=3&uin=1187258880&site=qq&menu=yes" title="QQ"><i class="fa-brands fa-qq"></i></a>
+         
+      </div>  
+    </div>
+  </div>
+</div>
+
+  
+  <div class="sticky">
+    
+      
+
+
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">分类</h3>
+      <div class="category-box">
+            <a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/">
+                教程
+                <div class="category-count">1</div>
+            </a>
+        </div>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">标签</h3>
+      <ul class="widget-tag-list" itemprop="keywords"><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Mysql/" rel="tag">Mysql</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Viviva/" rel="tag">Viviva</a></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">归档</h3>
+      
+      
+        <a class="archive-link" href="/archives/2023/08 ">
+          八月 2023 
+          <div class="archive-count">1 </div>
+        </a>
+      
+        <a class="archive-link" href="/archives/2023/07 ">
+          七月 2023 
+          <div class="archive-count">1 </div>
+        </a>
+      
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">最新文章</h3>
+      <ul>
+        
+          <a class="recent-link" href="/40090/" title="linux安装mysql文档" >
+            <div class="recent-link-text">
+              linux安装mysql文档
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/21663/" title="hexo-vivia的缩略图以及头图添加方法" >
+            <div class="recent-link-text">
+              hexo-vivia的缩略图以及头图添加方法
+            </div>
+          </a>
+        
+      </ul>
+    </div>
+  </div>
+
+    
+  </div>
+</sidebar>
+    </div>
+    <div id="content-body">
+       
+
+<article id="post-linux安装mysql文档" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  
+    
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 class="p-name article-title" itemprop="headline name">
+        linux安装mysql文档
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2023-08-08T12:26:19.000Z" itemprop="datePublished">2023-08-08</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            2.3k 词 
+          </div>
+        </div>
+        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mysql/" rel="tag">Mysql</a></li></ul>
+
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <h2 id="前期准备工作"><a href="#前期准备工作" class="headerlink" title="前期准备工作"></a>前期准备工作</h2><ol>
+<li>下载ssh远程连接工具</li>
+<li>云服务器更改密码</li>
+<li>远程服务器使用此账号密码登录（默认不是root账密）</li>
+<li>进入界面后输入<code>sudo passwd</code>更改<code>root</code>密码，连续输入两次回车即可<blockquote>
+<p>不建议远程连接的账密为<code>root</code>账密，因为<code>root</code>权限过大，容易造成服务器被入侵</p>
+</blockquote>
+</li>
+</ol>
+<blockquote>
+<p>云服务器为腾讯云，操作系统版本为Ubuntu18.04</p>
+</blockquote>
+<h2 id="服务器相关配置"><a href="#服务器相关配置" class="headerlink" title="服务器相关配置"></a>服务器相关配置</h2><p>这里我是切换了<code>root</code>用户，后续操作都在<code>root</code>下进行，如果未切换，则在前面加入<code>sudo</code></p>
+<h3 id="更换国内镜像"><a href="#更换国内镜像" class="headerlink" title="更换国内镜像"></a>更换国内镜像</h3><ol>
+<li>备份源列表 <code>/etc/apt/sources.list</code><pre><code>cp /etc/apt/sources.list /etc/apt/sources.list_backup
+</code></pre>
+</li>
+<li>打开<code>sources.list</code>文件<pre><code>vim /etc/apt/sources.list
+</code></pre>
+</li>
+<li>添加目标源的配置文件，最后保存即可，可将原本的源注释或删除<pre><code># 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security main restricted universe multiverse
+</code></pre>
+</li>
+<li>最后更新源<pre><code>apt-get update
+</code></pre>
+<h3 id="安装rpm"><a href="#安装rpm" class="headerlink" title="安装rpm"></a>安装rpm</h3>这个包是用来检查是否安装软件<pre><code>apt install rpm
+</code></pre>
+</li>
+</ol>
+<h2 id="mysql安装及配置"><a href="#mysql安装及配置" class="headerlink" title="mysql安装及配置"></a>mysql安装及配置</h2><h3 id="查看是否已经安装Mysql"><a href="#查看是否已经安装Mysql" class="headerlink" title="查看是否已经安装Mysql"></a>查看是否已经安装Mysql</h3><pre><code>rpm -qa | grep mysql
+</code></pre>
+<p>如果检查出来有东西，可以使用下面命令将其删除</p>
+<pre><code>rpm -e xxx
+</code></pre>
+<h3 id="配置mysql源"><a href="#配置mysql源" class="headerlink" title="配置mysql源"></a>配置mysql源</h3><p>首先我们的源是清华源，所以我们需要在清华开源软件镜像站中找到对应mysql的源<br>打开<a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/help/mysql/">此链接</a></p>
+<p><img src="mysql-rpm.PNG" alt="mysql-rpm"></p>
+<p>根据自己操纵系统版本确定镜像，复制并添加到<code>/etc/apt/sources.list.d/mysql-community.list</code></p>
+<blockquote>
+<p>注意运行<code>apt update</code></p>
+</blockquote>
+<h3 id="安装mysql"><a href="#安装mysql" class="headerlink" title="安装mysql"></a>安装mysql</h3><p>运行以下命令安装mysql</p>
+<pre><code>apt install mysql-server
+</code></pre>
+<p>之后会弹出输入<code>root密码</code>，随便输入即可</p>
+<h3 id="测试安装结果"><a href="#测试安装结果" class="headerlink" title="测试安装结果"></a>测试安装结果</h3><p>输入下列命令，其中-p后面跟着的是刚才设置的密码</p>
+<pre><code>mysql -u root -p123456
+</code></pre>
+<p>见到以下界面则表明安装成功<br></p>
+<p><img src="mysql%E8%BF%90%E8%A1%8C.PNG" alt="mysql成功"></p>
+<h2 id="远程连接mysql"><a href="#远程连接mysql" class="headerlink" title="远程连接mysql"></a>远程连接mysql</h2><p>这里我使用的是<code>navicat</code><br></p>
+<p><img src="mysql%E8%BF%9E%E6%8E%A5.PNG" alt="navicat连接"></p>
+<p>输入需要的参数，可以看到这里的端口是3306，那么我们需要打开服务器的3306端口，以便能够通过此端口连接到数据库</p>
+<h3 id="云服务器端口配置"><a href="#云服务器端口配置" class="headerlink" title="云服务器端口配置"></a>云服务器端口配置</h3><p>登录云服务器控制台，找到<code>防火墙</code>，点击<code>添加规则</code></p>
+<p><img src="%E6%B7%BB%E5%8A%A0%E8%A7%84%E5%88%99.PNG" alt="添加规则"></p>
+<p>输入<code>端口号</code>，其他默认不动，然后点击确定</p>
+<p><img src="%E6%B7%BB%E5%8A%A0%E8%A7%84%E5%88%99%E8%BE%93%E5%85%A5%E5%8F%82%E6%95%B0.PNG" alt="添加规则输入参数"></p>
+<p>当然，服务器端口放开了，我们还需要对mysql的账号密码进行配置，这样才能通过远程登录mysql</p>
+<h3 id="mysql账号密码配置"><a href="#mysql账号密码配置" class="headerlink" title="mysql账号密码配置"></a>mysql账号密码配置</h3><ol>
+<li>输入命令在ssh中登录mysql<pre><code>mysql -u root -p
+</code></pre>
+</li>
+<li>输入密码，进入mysql</li>
+<li>输入命令选择mysql数据库<pre class=" language-mysql"><code class="language-mysql">use mysql;
+</code></pre>
+</li>
+<li>输入命令查看root账号远程登录权限<pre class=" language-mysql"><code class="language-mysql">select user,host from user;
+</code></pre>
+</li>
+</ol>
+<p><img src="user%E8%A1%A8.PNG" alt="user表"></p>
+<p>我这里是已经更改，如果root的host为<code>localhost</code>，那么表示只能本地登录，如果为<code>%</code>，那么可以远程</p>
+<ol start="5">
+<li>输入命令<pre class=" language-mysql"><code class="language-mysql">grant all privileges on *.* to 'root'@'%' identified by '123456' with grant option;
+</code></pre>
+</li>
+<li>输入命令刷新权限<pre class=" language-mysql"><code class="language-mysql">flush privileges;
+</code></pre>
+</li>
+<li>输入命令退出mysql<pre class=" language-mysql"><code class="language-mysql">exit;
+</code></pre>
+</li>
+<li>重启mysql<pre><code>service mysql restart
+</code></pre>
+</li>
+</ol>
+<h3 id="修改mysql配置文件"><a href="#修改mysql配置文件" class="headerlink" title="修改mysql配置文件"></a>修改mysql配置文件</h3><p>输入命令查看3306端口访问权限</p>
+<pre><code>netstat -apn | grep 3306
+</code></pre>
+<p><img src="%E6%9F%A5%E7%9C%8B%E7%AB%AF%E5%8F%A3%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90.PNG" alt="查看端口访问权限"></p>
+<p>可以看到这里是127.0.0.1:3306，那么表明3306只能本地访问，那么我们修改<code>/etc/mysql/mysql.conf.d/mysqld.cnf</code>文件，将<code>bind-address</code>修改为<code>0.0.0.0</code></p>
+<p><img src="%E4%BF%AE%E6%94%B9bind-address.PNG" alt="修改bind-address"></p>
+<p>修改完成后重启服务</p>
+<pre><code>service mysql restart
+</code></pre>
+<blockquote>
+<p>这里远程登陆的密码为<code>grant all privileges on *.* to &#39;root&#39;@&#39;%&#39; identified by &#39;123456&#39; with grant option;</code>中<code>by</code>之后跟的，我这里是<code>123456</code></p>
+</blockquote>
+<p><img src="%E8%BF%9E%E6%8E%A5%E6%88%90%E5%8A%9F.PNG" alt="连接成功"></p>
+
+        
+      </div>
+
+         
+    </div>
+    
+     
+  </div>
+  
+    
+<nav id="article-nav">
+  <a class="article-nav-btn left  disabled "
+     >
+    <i class="fa-solid fa-angle-left"></i>
+    <p class="title-text">
+        
+    </p>
+  </a>
+  <a class="article-nav-btn right "
+    
+      href="/21663/"
+      title="hexo-vivia的缩略图以及头图添加方法"
+     >
+
+    <p class="title-text">
+      
+        hexo-vivia的缩略图以及头图添加方法
+        
+    </p>
+    <i class="fa-solid fa-angle-right"></i>
+  </a>
+</nav>
+
+
+  
+</article>
+
+
+  
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <div id="comment-card" class="comment-card">
+    <div class="main-title-bar">
+      <div class="main-title-dot"></div>
+      <div class="main-title">留言 </div>
+    </div>
+    <div id="vcomments"></div>
+  </div>
+  <script>
+      new Valine({"enable":true,"appId":"3kfxhgbugXMUBVoNxh0hQ2fw-gzGzoHsz","appKey":"wzNsBwxLt9wCf3WscfJWbfRI","placeholder":"请发表你的看法吧","pageSize":10,"highlight":true,"serverURLs":null,"el":"#vcomments"});
+  </script>
+ 
+    </div>
+    <div id="footer-wrapper">
+      <footer id="footer">
+  
+  <div id="footer-info" class="inner">
+    
+    &copy; 2023 小昱<br>
+    Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & Theme <a target="_blank" rel="noopener" href="https://github.com/saicaca/hexo-theme-vivia">Vivia</a>
+  </div>
+</footer>
+
+    </div>
+    <div class="back-to-top-wrapper">
+    <button id="back-to-top-btn" class="back-to-top-btn" onclick="topFunction()">
+        <span class="material-symbols-rounded">keyboard_arrow_up</span>
+    </button>
+</div>
+
+<script>
+    function topFunction() {
+        window.scroll({ top: 0, behavior: 'smooth' });
+    }
+    let btn = document.getElementById('back-to-top-btn');
+    function scrollFunction() {
+        if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+            btn.style.opacity = 1;
+        } else {
+            btn.style.opacity = 0;
+        }
+    }
+    window.onscroll = function() {
+        scrollFunction();
+    }
+</script>
+
+  </div>
+  <script src="/js/light-dark-switch.js"></script>
+</body>
+</html>
