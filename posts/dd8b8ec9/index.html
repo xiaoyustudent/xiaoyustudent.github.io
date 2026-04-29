@@ -1,0 +1,2001 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>无人机飞行原理核心知识点（CAAC执照备考） | 柒柒昱的博客</title><meta name="author" content="柒柒昱"><meta name="copyright" content="柒柒昱"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="本文档为CAAC无人机执照考试「飞行原理」模块核心考点整理，覆盖大气基础、流体力学、固定翼气动特性、操纵原理、飞行稳定性等全维度内容，标注必考重点、易错点与记忆口诀，修正知识点偏差，100%适配Hexo Butterfly主题Katex公式渲染，兼顾理论学习与应试备考，可直接复制使用。   一、大气基础知识点 1.1 大气核心特性 1.1.1 空气密度规律  空气密度随高度增加而减小 空气密度与">
+<meta property="og:type" content="article">
+<meta property="og:title" content="无人机飞行原理核心知识点（CAAC执照备考）">
+<meta property="og:url" content="http://example.com/posts/dd8b8ec9/index.html">
+<meta property="og:site_name" content="柒柒昱的博客">
+<meta property="og:description" content="本文档为CAAC无人机执照考试「飞行原理」模块核心考点整理，覆盖大气基础、流体力学、固定翼气动特性、操纵原理、飞行稳定性等全维度内容，标注必考重点、易错点与记忆口诀，修正知识点偏差，100%适配Hexo Butterfly主题Katex公式渲染，兼顾理论学习与应试备考，可直接复制使用。   一、大气基础知识点 1.1 大气核心特性 1.1.1 空气密度规律  空气密度随高度增加而减小 空气密度与">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/butterfly-icon.png">
+<meta property="article:published_time" content="2026-04-28T12:38:27.000Z">
+<meta property="article:modified_time" content="2026-04-29T15:11:07.214Z">
+<meta property="article:author" content="柒柒昱">
+<meta property="article:tag" content="无人机">
+<meta property="article:tag" content="CAAC">
+<meta property="article:tag" content="飞行原理">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/butterfly-icon.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "无人机飞行原理核心知识点（CAAC执照备考）",
+  "url": "http://example.com/posts/dd8b8ec9/",
+  "image": "http://example.com/img/butterfly-icon.png",
+  "datePublished": "2026-04-28T12:38:27.000Z",
+  "dateModified": "2026-04-29T15:11:07.214Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "柒柒昱",
+      "url": "http://example.com"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/posts/dd8b8ec9/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '无人机飞行原理核心知识点（CAAC执照备考）',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">1</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">柒柒昱的博客</span></a><a class="nav-page-title" href="/"><span class="site-name">无人机飞行原理核心知识点（CAAC执照备考）</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">无人机飞行原理核心知识点（CAAC执照备考）</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-04-28T12:38:27.000Z" title="发表于 2026-04-28 20:38:27">2026-04-28</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-04-29T15:11:07.214Z" title="更新于 2026-04-29 23:11:07">2026-04-29</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%97%A0%E4%BA%BA%E6%9C%BA/">无人机</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><article class="container post-content" id="article-container"><blockquote>
+<p>本文档为CAAC无人机执照考试「飞行原理」模块核心考点整理，覆盖大气基础、流体力学、固定翼气动特性、操纵原理、飞行稳定性等全维度内容，标注必考重点、易错点与记忆口诀，修正知识点偏差，<strong>100%适配Hexo Butterfly主题Katex公式渲染</strong>，兼顾理论学习与应试备考，可直接复制使用。</p>
+</blockquote>
+<hr>
+<h1>一、大气基础知识点</h1>
+<h2 id="1-1-大气核心特性">1.1 大气核心特性</h2>
+<h3 id="1-1-1-空气密度规律">1.1.1 空气密度规律</h3>
+<ul>
+<li>空气密度<strong>随高度增加而减小</strong></li>
+<li>空气密度与<strong>大气压力成正比</strong>，与<strong>绝对温度成反比</strong></li>
+</ul>
+<blockquote>
+<p>补充理解：温度越高，空气分子越活跃、体积膨胀，单位体积内质量越小；压力越低，空气越稀薄，两者都会导致密度下降。无人机在高原、高温环境下，需要更高转速/更大油门才能维持升力。<br>
+【CAAC补充考点】国际标准大气（ISA）海平面基准：气压101325Pa，温度15℃（288.15K），空气密度1.225kg/m³，为气动计算的标准参考条件。</p>
+</blockquote>
+<h3 id="1-1-2-大气层垂直分层（从低到高）">1.1.2 大气层垂直分层（从低到高）</h3>
+<p>对流层 → 平流层 → 中间层 → 电离层 → 散逸层</p>
+<blockquote>
+<p>核心考点：</p>
+<ol>
+<li>对流层高度范围0~11km，核心特征为<strong>气温随高度升高而降低</strong>（每升高1000m，气温平均下降6.5℃），空气垂直对流强烈，天气现象复杂，<strong>绝大多数民用无人机飞行均在对流层内</strong></li>
+<li>平流层高度范围11~50km，11~20km为同温层，气温恒定-56.5℃，气流平稳、阻力小，民航客机多在<strong>平流层底部</strong>巡航</li>
+</ol>
+</blockquote>
+<h3 id="1-1-3-气体黏性特性">1.1.3 气体黏性特性</h3>
+<p>气体黏性<strong>随温度升高而增大</strong></p>
+<blockquote>
+<p>补充理解：空气黏性的本质是分子间的内摩擦阻力。温度越高，空气分子热运动越剧烈，内摩擦阻力越大，会直接增加无人机飞行的摩擦阻力。<br>
+【高频易错点】液体黏性随温度升高而减小，与气体规律完全相反，为判断题必考陷阱。</p>
+</blockquote>
+<h2 id="1-2-空气密度计算公式">1.2 空气密度计算公式</h2>
+<p>核心公式（理想气体状态方程）：</p>
+<p>$$<br>
+\rho = \frac{P}{R \cdot T}<br>
+$$</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">符号</th>
+<th style="text-align:left">物理含义</th>
+<th style="text-align:left">单位/取值说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">$\rho$</td>
+<td style="text-align:left">空气密度</td>
+<td style="text-align:left">$kg/m^3$</td>
+</tr>
+<tr>
+<td style="text-align:left">$P$</td>
+<td style="text-align:left">大气压力</td>
+<td style="text-align:left">帕斯卡（Pa）</td>
+</tr>
+<tr>
+<td style="text-align:left">$T$</td>
+<td style="text-align:left">绝对温度</td>
+<td style="text-align:left">开尔文（K），换算公式：<strong>绝对温度 = 摄氏温度 + 273.15</strong></td>
+</tr>
+<tr>
+<td style="text-align:left">$R$</td>
+<td style="text-align:left">干空气气体常数</td>
+<td style="text-align:left">固定值 $\approx 287\ J/(kg·K)$</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>高频易错点：</p>
+<ol>
+<li>计算时温度必须使用<strong>开尔文（K）</strong>，严禁直接代入摄氏温度（℃）</li>
+<li>压力越低、温度越高，空气密度越小，无人机升力性能会显著下降</li>
+</ol>
+</blockquote>
+<hr>
+<h1>二、流体力学基础定理</h1>
+<h2 id="2-1-连续性定理">2.1 连续性定理</h2>
+<p>核心公式（低速定常流动）：</p>
+<p>$$<br>
+A_1 V_1 = A_2 V_2<br>
+$$</p>
+<ul>
+<li>$A_1、A_2$：同一流管前后两个截面的面积</li>
+<li>$V_1、V_2$：对应截面处的气流速度</li>
+</ul>
+<blockquote>
+<p>核心结论：低速定常流动的理想流体，气流速度与流管截面积成反比——<strong>流管变窄→流速加快；流管变宽→流速减慢</strong>。这是机翼上表面气流加速的核心理论基础。<br>
+【补充前提】适用条件：低速、定常、不可压缩、连续介质的理想流体。</p>
+</blockquote>
+<h2 id="2-2-伯努利定理">2.2 伯努利定理</h2>
+<p>核心公式（同一流管内）：</p>
+<p>$$<br>
+P_0 = \frac{1}{2}\rho V^2 + P<br>
+$$</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">符号</th>
+<th style="text-align:left">物理含义</th>
+<th style="text-align:left">核心特性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">$P_0$</td>
+<td style="text-align:left">总压</td>
+<td style="text-align:left">同一流管内恒定不变</td>
+</tr>
+<tr>
+<td style="text-align:left">$\frac{1}{2}\rho V^2$</td>
+<td style="text-align:left">动压</td>
+<td style="text-align:left">与气流速度的平方成正比，气流运动产生的压力</td>
+</tr>
+<tr>
+<td style="text-align:left">$P$</td>
+<td style="text-align:left">静压</td>
+<td style="text-align:left">空气本身的固有压力，与动压此消彼长</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>必考核心结论：同一流管的任意截面上，<strong>动压 + 静压 = 总压 = 恒定值</strong></p>
+<ul>
+<li>动压增大 → 静压减小</li>
+<li>动压减小 → 静压增大</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>易错提醒：</p>
+<ol>
+<li>伯努利定理的适用范围：<strong>马赫数Ma&lt;0.3的低速流动</strong>，此时空气压缩性影响可忽略，视为不可压缩流体；Ma&gt;0.3时定理不再适用</li>
+<li>机翼升力的核心来源：上表面流管收窄→流速加快→动压增大→静压降低，上下表面形成压力差，从而产生向上的升力<br>
+【补充考点】无人机空速管（皮托管）的核心原理：通过测量总压与静压的差值（动压），计算得到飞行空速。</li>
+</ol>
+</blockquote>
+<h2 id="2-3-两大定理联动逻辑">2.3 两大定理联动逻辑</h2>
+<blockquote>
+<p>升力产生的基础逻辑：</p>
+<ol>
+<li><strong>连续性定理</strong>：解释「机翼上表面气流为什么更快」（机翼上表面凸起，流管有效截面积收窄）</li>
+<li><strong>伯努利定理</strong>：解释「流速更快为什么会产生升力」（流速快→动压大→静压小，上下表面形成压力差）<br>
+两者结合，构成了机翼产生升力的核心底层逻辑。</li>
+</ol>
+</blockquote>
+<hr>
+<h1>三、固定翼无人机机翼核心参数</h1>
+<h2 id="3-1-机翼平面形状核心参数">3.1 机翼平面形状核心参数</h2>
+<h3 id="3-1-1-机翼面积（-S-）">3.1.1 机翼面积（$S$）</h3>
+<ul>
+<li><strong>定义</strong>：机翼在水平面上的投影面积（含机身遮挡部分）</li>
+<li><strong>核心影响</strong>：面积越大，可产生的升力越大，更适配载重、低速、长航时飞行场景</li>
+</ul>
+<h3 id="3-1-2-翼展（-b-）">3.1.2 翼展（$b$）</h3>
+<ul>
+<li><strong>定义</strong>：机翼左右翼尖最外侧之间的直线距离</li>
+<li><strong>核心作用</strong>：描述机翼横向尺寸，是计算展弦比的核心参数</li>
+</ul>
+<h3 id="3-1-3-平均几何弦长与平均气动力弦长">3.1.3 平均几何弦长与平均气动力弦长</h3>
+<h4 id="平均几何弦长">平均几何弦长</h4>
+<ul>
+<li><strong>定义</strong>：机翼面积与翼展的比值，代表机翼从前缘到后缘的平均宽度</li>
+<li>计算公式：</li>
+</ul>
+<p>$$<br>
+\text{平均几何弦长} = \frac{\text{机翼面积}S}{\text{翼展}b}<br>
+$$</p>
+<h4 id="平均气动力弦长（MAC）【CAAC必考】">平均气动力弦长（MAC）【CAAC必考】</h4>
+<ul>
+<li><strong>定义</strong>：表征机翼气动力特性的等效弦长，是无人机重心位置、气动焦点位置的基准参考</li>
+<li><strong>核心应用</strong>：无人机重心位置用「重心到MAC前缘的距离 ÷ MAC长度」的百分数表示，为执照考试核心考点</li>
+</ul>
+<h3 id="3-1-4-展弦比（-A-）">3.1.4 展弦比（$A$）</h3>
+<ul>
+<li><strong>定义</strong>：描述机翼“细长/短粗”程度的核心参数</li>
+<li>计算公式：</li>
+</ul>
+<p>$$<br>
+A = \frac{b^2}{S} = \frac{b}{\text{平均几何弦长}}<br>
+$$</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">类型</th>
+<th style="text-align:left">特征</th>
+<th style="text-align:left">适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">大展弦比</td>
+<td style="text-align:left">机翼细长</td>
+<td style="text-align:left">滑翔机、长航时测绘无人机，巡航效率高、诱导阻力小</td>
+</tr>
+<tr>
+<td style="text-align:left">小展弦比</td>
+<td style="text-align:left">机翼短粗</td>
+<td style="text-align:left">高速无人机、竞速无人机，机动性强、失速迎角大、高速性能好</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-1-5-梯形比（尖削比）">3.1.5 梯形比（尖削比）</h3>
+<ul>
+<li><strong>定义</strong>：机翼翼尖弦长 ÷ 翼根弦长（翼根：机翼与机身连接处；翼尖：机翼最外侧）</li>
+<li><strong>核心影响</strong>：
+<ul>
+<li>比值=1：等弦平直翼</li>
+<li>比值越小：机翼从翼根到翼尖收束越明显，可优化展向升力分布、降低诱导阻力</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-1-6-后掠角">3.1.6 后掠角</h3>
+<ul>
+<li><strong>定义</strong>：机翼特征线与机身对称面垂线之间的夹角，无特殊说明时，默认指<strong>1/4弦线后掠角</strong></li>
+<li>常见分类：前缘后掠角、1/4弦线后掠角、中弦线后掠角、后缘后掠角</li>
+<li>正负定义：正角度=机翼后掠（主流设计）；负角度=机翼前掠（少见）</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">类型</th>
+<th style="text-align:left">角度范围</th>
+<th style="text-align:left">适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">平直翼</td>
+<td style="text-align:left">后掠角＜20°</td>
+<td style="text-align:left">亚声速、低速长航时无人机</td>
+</tr>
+<tr>
+<td style="text-align:left">后掠翼</td>
+<td style="text-align:left">后掠角＞25°</td>
+<td style="text-align:left">高亚声速、超声速无人机</td>
+</tr>
+<tr>
+<td style="text-align:left">三角翼</td>
+<td style="text-align:left">前缘后掠角≈60°</td>
+<td style="text-align:left">超声速无尾式固定翼无人机</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>【补充考点】后掠翼的核心作用：提高临界马赫数，延缓激波产生，降低高速飞行的波阻，提升高速飞行性能。</p>
+</blockquote>
+<h3 id="3-1-7-上反角与下反角">3.1.7 上反角与下反角</h3>
+<ul>
+<li><strong>上反角</strong>：机翼基准面与水平面的夹角，机翼从根部向外向上翘起，核心作用是<strong>增强横向静稳定性</strong></li>
+<li><strong>下反角</strong>：上反角为负值，机翼从根部向外向下倾斜，核心作用是<strong>降低横滚稳定性，提升操控灵活性</strong></li>
+</ul>
+<h2 id="3-2-机翼核心气动公式">3.2 机翼核心气动公式</h2>
+<h3 id="3-2-1-升力公式">3.2.1 升力公式</h3>
+<p>$$<br>
+L = \frac{1}{2}\rho V^2 S C_L<br>
+$$</p>
+<h3 id="3-2-2-阻力公式">3.2.2 阻力公式</h3>
+<p>$$<br>
+D = \frac{1}{2}\rho V^2 S C_D<br>
+$$</p>
+<h3 id="3-2-3-升力系数公式">3.2.3 升力系数公式</h3>
+<p>$$<br>
+C_L = \frac{L}{\frac{1}{2}\rho V^2 S}<br>
+$$</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">符号</th>
+<th style="text-align:left">物理含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">$L$</td>
+<td style="text-align:left">升力</td>
+</tr>
+<tr>
+<td style="text-align:left">$D$</td>
+<td style="text-align:left">阻力</td>
+</tr>
+<tr>
+<td style="text-align:left">$C_L$</td>
+<td style="text-align:left">升力系数</td>
+</tr>
+<tr>
+<td style="text-align:left">$C_D$</td>
+<td style="text-align:left">阻力系数</td>
+</tr>
+<tr>
+<td style="text-align:left">$\rho$</td>
+<td style="text-align:left">空气密度</td>
+</tr>
+<tr>
+<td style="text-align:left">$V$</td>
+<td style="text-align:left">相对气流速度（飞行速度）</td>
+</tr>
+<tr>
+<td style="text-align:left">$S$</td>
+<td style="text-align:left">机翼面积</td>
+</tr>
+<tr>
+<td style="text-align:left">$\frac{1}{2}\rho V^2$</td>
+<td style="text-align:left">飞行动压</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>补充说明：翼尖涡流<br>
+有限翼展机翼的下翼面压力始终高于上翼面，下表面的高压气流会绕过翼尖流向上表面的低压区，从而形成绕翼尖的空气涡流，是诱导阻力的核心来源。</p>
+</blockquote>
+<h3 id="3-2-4-升力系数曲线">3.2.4 升力系数曲线</h3>
+<p><img src="%E5%8D%87%E5%8A%9B%E7%B3%BB%E6%95%B0%E6%9B%B2%E7%BA%BF.jpg" alt=""></p>
+<h4 id="一、基本概念">一、基本概念</h4>
+<p><strong>升力系数</strong>（$C_L$）：反映机翼产生升力能力的无量纲参数，数值越大，机翼升力能力越强。<br>
+<strong>迎角（$\alpha$）</strong>：机翼弦线与迎面气流方向的夹角，是影响升力系数的核心变量。</p>
+<h4 id="二、坐标轴定义">二、坐标轴定义</h4>
+<ul>
+<li><strong>横轴（X轴）</strong>：迎角 $\alpha$（单位：°）</li>
+<li><strong>纵轴（Y轴）</strong>：升力系数 $C_L$</li>
+</ul>
+<h4 id="三、曲线各阶段解析">三、曲线各阶段解析</h4>
+<ol>
+<li>
+<p>负迎角阶段：迎角小于 0°，升力系数为负值，机翼产生<strong>负升力</strong>（向下的力）。</p>
+</li>
+<li>
+<p>线性增长阶段：迎角从 0° 增加至临界迎角前，升力系数与迎角呈<strong>线性正相关</strong>。<br>
+迎角越大，升力系数越大，该区间为飞机正常飞行的安全工作区间。</p>
+</li>
+<li>
+<p>峰值阶段（临界迎角）：曲线最高点对应<strong>临界迎角</strong>，此时达到<strong>最大升力系数 $C_{Lmax}$</strong>。该状态常用于飞机起飞、着陆等需要大升力的场景。</p>
+</li>
+<li>
+<p>失速阶段：当迎角超过临界迎角后，气流在机翼上表面分离，升力系数<strong>急剧下降</strong>，飞机进入失速状态，升力不足、操控性下降。</p>
+</li>
+</ol>
+<h4 id="四、关键术语总结">四、关键术语总结</h4>
+<ul>
+<li><strong>零升迎角</strong>：升力系数为 0 时对应的迎角</li>
+<li><strong>临界迎角</strong>：升力系数达到最大值的迎角，超过即失速</li>
+<li><strong>$C_{Lmax}$</strong>：机翼所能提供的最大升力系数</li>
+</ul>
+<hr>
+<h1>四、机翼操纵装置与三轴运动原理</h1>
+<h2 id="4-1-机翼核心操纵装置">4.1 机翼核心操纵装置</h2>
+<h3 id="4-1-1-副翼">4.1.1 副翼</h3>
+<ul>
+<li><strong>安装位置</strong>：机翼后缘、靠近翼尖的可动舵面，左右对称布置</li>
+<li><strong>核心作用</strong>：控制飞机绕纵轴的<strong>滚转运动</strong></li>
+<li><strong>操纵原理</strong>：
+<ul>
+<li>左副翼上偏、右副翼下偏→左侧机翼升力减小、右侧升力增大→飞机向左滚转</li>
+<li>右副翼上偏、左副翼下偏→右侧机翼升力减小、左侧升力增大→飞机向右滚转</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>【补充考点】副翼反效（逆操纵）：高速飞行时，机翼扭转导致副翼偏转产生的力矩与预期相反，是高速飞行的核心风险点。</p>
+</blockquote>
+<h3 id="4-1-2-襟翼">4.1.2 襟翼</h3>
+<ul>
+<li><strong>安装位置</strong>：机翼后缘、靠近翼根的可动舵面</li>
+<li><strong>核心作用</strong>：起飞/着陆低速阶段<strong>增升</strong>，同时同步增大阻力</li>
+<li><strong>工作效果</strong>：
+<ul>
+<li>升力增大：襟翼下偏增大机翼弯度与有效面积，大幅提升升力系数，低速下即可获得足够升力</li>
+<li>阻力增大：襟翼展开增大迎风面积与气流分离，同步提升压差阻力，可缩短着陆滑跑距离</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>核心考点：带襟翼无人机放下襟翼时，<strong>升力与阻力同时增大</strong>，最大升力系数提升，失速速度降低。</p>
+</blockquote>
+<h3 id="4-1-3-前缘缝翼">4.1.3 前缘缝翼</h3>
+<ul>
+<li><strong>安装位置</strong>：机翼前缘的可动装置，伸出后与机翼主体形成缝隙</li>
+<li><strong>核心作用</strong>：低速大迎角状态下<strong>增升、延缓气流分离</strong>，提升失速迎角</li>
+<li><strong>增升原理</strong>：缝翼伸出后，下表面高压高速气流通过缝隙吹向上表面附面层，补充气流能量，推迟气流分离，让机翼可在更大迎角下保持升力，常与襟翼配合用于起降阶段。</li>
+</ul>
+<h3 id="4-1-4-扰流板（减速板-减升装置）">4.1.4 扰流板（减速板/减升装置）</h3>
+<ul>
+<li><strong>安装位置</strong>：机翼上表面、靠近翼根的可动面板</li>
+<li><strong>核心作用</strong>：<strong>减升、增阻</strong>，属于减升装置</li>
+<li><strong>工作原理</strong>：扰流板向上抬起，破坏机翼上表面平滑气流，导致气流提前分离，升力大幅下降，同时显著增大飞行阻力</li>
+</ul>
+<blockquote>
+<p>核心考点：常用于着陆时减速、减小升力，防止飞机飘飞；部分无人机也用它辅助滚转控制。</p>
+</blockquote>
+<h2 id="4-2-飞机三轴与对应运动【CAAC必背】">4.2 飞机三轴与对应运动【CAAC必背】</h2>
+<p>飞机的所有运动均围绕三个互相垂直的轴进行，对应三种核心运动与操纵舵面：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">轴的名称</th>
+<th style="text-align:left">定义</th>
+<th style="text-align:left">绕轴的运动</th>
+<th style="text-align:left">核心控制舵面</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>纵轴（滚转轴）</strong></td>
+<td style="text-align:left">从机头贯穿到机尾，沿机身长度方向</td>
+<td style="text-align:left">滚转（左右倾斜）</td>
+<td style="text-align:left">副翼</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>横轴（俯仰轴）</strong></td>
+<td style="text-align:left">左右贯穿机翼，垂直于纵轴</td>
+<td style="text-align:left">俯仰（抬头/低头）</td>
+<td style="text-align:left">升降舵</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>立轴（偏航轴）</strong></td>
+<td style="text-align:left">从机身顶部贯穿到底部，垂直于水平面</td>
+<td style="text-align:left">偏航（机头左右偏转）</td>
+<td style="text-align:left">方向舵</td>
+</tr>
+</tbody>
+</table>
+<h3 id="补充舵面操纵原理">补充舵面操纵原理</h3>
+<ol>
+<li><strong>升降舵</strong>：安装在水平尾翼后缘，向上偏转→平尾负升力增大→机头上仰；向下偏转→平尾正升力增大→机头下俯</li>
+<li><strong>方向舵</strong>：安装在垂直尾翼后缘，向左偏转→垂尾产生向右气动力→机头左偏；向右偏转→垂尾产生向左气动力→机头右偏</li>
+</ol>
+<blockquote>
+<p>核心操纵规律：</p>
+<ul>
+<li>操纵副翼时，飞机绕<strong>纵轴</strong>做滚转运动</li>
+<li>操纵升降舵时，飞机绕<strong>横轴</strong>做俯仰运动</li>
+<li>操纵方向舵时，飞机绕<strong>立轴</strong>做偏航运动<br>
+补充说明：实际飞行中，三轴运动常互相耦合，比如副翼偏转也会带来轻微的偏航趋势（逆偏航效应）。</li>
+</ul>
+</blockquote>
+<hr>
+<h1>五、固定翼无人机的飞行阻力</h1>
+<h2 id="5-1-附面层基础">5.1 附面层基础</h2>
+<p><strong>核心定义</strong>：空气流过固定翼无人机时，贴近机体表面、气流速度由主流速度逐渐降低为<strong>0</strong>的一层空气流动层。</p>
+<ul>
+<li>核心分类：<strong>层流附面层</strong>、<strong>紊流附面层</strong></li>
+</ul>
+<blockquote>
+<p>知识点补充：层流附面层气流平稳、摩擦阻力小；紊流附面层气流紊乱、摩擦阻力大，但不易发生气流分离。<br>
+【补充考点】附面层转捩：层流附面层在一定条件下会转变为紊流附面层，转捩点越靠后，摩擦阻力越小，层流翼型的核心设计目标就是延缓转捩。<br>
+易错点：附面层只存在于<strong>物体表面</strong>，并非整个空间气流；气流速度是<strong>逐步降为零</strong>，不是突然变为零。</p>
+</blockquote>
+<h2 id="5-2-四大基础阻力类型">5.2 四大基础阻力类型</h2>
+<ol>
+<li>
+<p><strong>摩擦阻力【重点】</strong></p>
+<ul>
+<li>成因：空气<strong>黏性</strong>与无人机表面摩擦产生</li>
+<li>影响因素：空气黏性越大、机体表面越粗糙、机体表面积越大 → 摩擦阻力越大</li>
+</ul>
+</li>
+<li>
+<p><strong>压差阻力【重点】</strong></p>
+<ul>
+<li>成因：机翼前缘流速慢、压力大；后缘气流分离形成涡流、压力小，<strong>前后压力差</strong>形成的阻力</li>
+<li>影响因素：与<strong>迎风面积、外形形状、气流相对位置</strong>密切相关，流线型外形可大幅降低压差阻力</li>
+</ul>
+</li>
+<li>
+<p><strong>诱导阻力【必考】</strong></p>
+<ul>
+<li>成因：<strong>产生升力必然附带的附加阻力</strong>，由翼尖涡流、下洗气流产生</li>
+<li>减阻方法：加装<strong>翼梢小翼</strong>、增大展弦比、优化机翼梯形比，削弱翼尖涡流、减小下洗速度，降低诱导阻力</li>
+</ul>
+</li>
+<li>
+<p><strong>干扰阻力【重点】</strong></p>
+<ul>
+<li>成因：机身、机翼、尾翼各部件<strong>气流互相干扰</strong>产生的额外阻力</li>
+<li>减阻方法：合理布局部件位置；结合部安装<strong>整流包皮</strong>，使气流圆滑过渡</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>易错点：诱导阻力<strong>不是</strong>摩擦/形状阻力，是<strong>升力的副产品</strong>；干扰阻力是<strong>部件间气流干扰额外产生</strong>的阻力，不是单一部件的固有阻力。</p>
+</blockquote>
+<h2 id="5-3-阻力大类划分与速度变化规律">5.3 阻力大类划分与速度变化规律</h2>
+<p><strong>两大核心分类【必背】</strong></p>
+<ul>
+<li><strong>升致阻力</strong>：即<strong>诱导阻力</strong>，与<strong>升力强相关</strong>，是产生升力的必然损耗，零升状态下为0</li>
+<li><strong>零升阻力（寄生阻力）</strong>：包含<strong>摩擦阻力+压差阻力+干扰阻力</strong>，与升力无直接关联，只要飞行就存在</li>
+</ul>
+<p><strong>速度变化规律【核心考点】</strong></p>
+<ul>
+<li>诱导阻力：飞行速度<strong>越大，阻力越小</strong>；低速大迎角时显著增大</li>
+<li>寄生阻力：飞行速度<strong>越大，阻力越大</strong>，与<strong>速度平方成正比</strong></li>
+</ul>
+<p><strong>飞行阶段阻力主导</strong></p>
+<ul>
+<li>低速起降阶段：<strong>诱导阻力</strong>占主导</li>
+<li>高速巡航阶段：<strong>寄生阻力</strong>占主导</li>
+</ul>
+<p><strong>最优临界状态</strong><br>
+诱导阻力 = 寄生阻力 → <strong>总阻力最小、升阻比最大</strong>，为无人机最优巡航工况</p>
+<blockquote>
+<p>知识点补充：高度越高空气越稀薄，同等飞行速度下，整体阻力会减小。<br>
+易错点：低速看诱导阻力，高速看寄生阻力；飞行中永远不存在阻力为0的状态。</p>
+</blockquote>
+<h2 id="5-4-针对性减阻措施【背诵】">5.4 针对性减阻措施【背诵】</h2>
+<ul>
+<li>减小飞机迎风面积、优化流线型外形 → 减小<strong>压差阻力</strong></li>
+<li>合理布局机体结构位置、加装整流包皮 → 减小<strong>干扰阻力</strong></li>
+<li>增大机翼展弦比、加装翼梢小翼 → 减小<strong>诱导阻力</strong></li>
+<li>优化机体表面光滑度、采用层流翼型 → 减小<strong>摩擦阻力</strong></li>
+</ul>
+<hr>
+<h1>六、固定翼无人机低速空气动力性能</h1>
+<h2 id="6-1-升力核心影响因素">6.1 升力核心影响因素</h2>
+<p><strong>核心影响维度</strong>：迎角、气流速度、空气密度、机翼形状、机翼面积</p>
+<ul>
+<li>飞行高度越低、飞行速度越大、机翼面积越大 → 升力越大</li>
+<li>机翼形状固定时，升力系数、阻力系数<strong>仅由迎角决定</strong></li>
+</ul>
+<blockquote>
+<p>易错点：升力并非只由速度决定，<strong>迎角改变也能大幅改变升力大小</strong>。</p>
+</blockquote>
+<h2 id="6-2-迎角核心概念【必考】">6.2 迎角核心概念【必考】</h2>
+<p><strong>迎角定义</strong>：机翼前进方向（相对气流方向）与<strong>翼弦</strong>的夹角，又称攻角。</p>
+<p><strong>核心关键迎角</strong></p>
+<ul>
+<li><strong>零升迎角</strong>：升力系数为0时对应的迎角
+<ul>
+<li>对称翼型：零升迎角 = <strong>0°</strong></li>
+<li>非对称翼型：零升迎角为<strong>负值</strong></li>
+</ul>
+</li>
+<li><strong>临界迎角（失速迎角）</strong>：升力系数达到<strong>最大值</strong>时对应的迎角；超过该迎角即发生<strong>失速</strong></li>
+</ul>
+<p><strong>升力系数变化规律</strong><br>
+迎角增大 → 升力系数先线性增大；接近临界迎角时增速放缓；<strong>超过临界迎角后，升力系数骤降</strong>。</p>
+<blockquote>
+<p>知识点补充：最大升力系数越大，无人机<strong>起飞滑跑所需速度越小</strong>，起降性能越好。<br>
+【核心易错点】失速不是飞机发动机停转，是<strong>迎角超过临界值后气流严重分离、升力急剧下降</strong>的现象；失速只与迎角有关，与速度、飞行姿态无关，只要迎角超标，任何速度都会失速。</p>
+</blockquote>
+<h2 id="6-3-失速速度【CAAC必考补充】">6.3 失速速度【CAAC必考补充】</h2>
+<p>失速速度是飞机刚达到临界迎角时对应的飞行速度，是无人机安全飞行的核心边界，核心公式：</p>
+<p>$$<br>
+V_s = \sqrt{\frac{2W}{\rho S C_{Lmax}}}<br>
+$$</p>
+<p>其中$W$为无人机重量，$C_{Lmax}$为最大升力系数</p>
+<p><strong>影响失速速度的核心因素</strong></p>
+<ol>
+<li>重量越大，失速速度越大</li>
+<li>载荷因数越大，失速速度越大</li>
+<li>放下襟翼，$C_{Lmax}$增大，失速速度减小</li>
+<li>高原/高温环境，空气密度$\rho$减小，失速速度增大</li>
+</ol>
+<h2 id="6-4-阻力系数曲线规律">6.4 阻力系数曲线规律</h2>
+<ul>
+<li>小迎角范围：阻力系数小、增长缓慢</li>
+<li>大迎角范围：阻力系数快速增大</li>
+<li>超过临界迎角：阻力系数<strong>急剧暴涨</strong></li>
+<li>阻力系数永远不为0，最小值为<strong>零升阻力系数</strong></li>
+</ul>
+<h2 id="6-5-升阻比【核心考点】">6.5 升阻比【核心考点】</h2>
+<p><strong>核心公式</strong>：</p>
+<p>$$<br>
+K = \frac{L}{D} = \frac{C_L}{C_D}<br>
+$$</p>
+<ul>
+<li>升阻比越大：同等升力下阻力越小，无人机气动性能越好、燃油/电能效率越高，航时、航程越长</li>
+<li><strong>有利迎角</strong>：升阻比达到<strong>最大值</strong>的迎角，此时平飞所需推力最小、飞行效率最高</li>
+</ul>
+<p><strong>升阻比变化规律</strong></p>
+<ol>
+<li>中小迎角范围：迎角增大 → 升阻比持续上升</li>
+<li>超过有利迎角：升力增速放缓、阻力暴增 → 升阻比快速下降</li>
+<li>临界迎角附近：气流严重分离 → 升阻比大幅降低</li>
+</ol>
+<h3 id="气动极曲线【CAAC难点考点】">气动极曲线【CAAC难点考点】</h3>
+<p>气动极曲线是以<strong>阻力系数$C_D$为横坐标，升力系数$C_L$为纵坐标</strong>绘制的曲线，完整反映无人机全迎角范围的升阻特性：</p>
+<ol>
+<li>从坐标原点向极曲线作切线，<strong>切线斜率=升阻比$K$</strong>，切点对应最大升阻比状态，切点迎角即为有利迎角</li>
+<li>曲线与纵轴交点对应零升迎角</li>
+<li>曲线最高点对应临界迎角（最大升力系数）</li>
+</ol>
+<blockquote>
+<p>实操考点：空速适度减小时，为保持飞行高度不变，必须<strong>增大迎角</strong>来维持升力恒定。<br>
+易错点：有利迎角 ≠ 临界迎角；有利迎角是飞行效率最高的迎角，临界迎角是升力系数最大的迎角，超过即失速。</p>
+</blockquote>
+<hr>
+<h1>七、固定翼无人机重心与操纵力矩</h1>
+<h2 id="7-1-重心核心定义">7.1 重心核心定义</h2>
+<p><strong>重心</strong>：无人机各部件重力的<strong>合力作用点</strong>；考试与实操中，重点关注<strong>机身纵轴的前后位置</strong>。</p>
+<blockquote>
+<p>【CAAC必考】重心位置表示方法：用<strong>重心到平均气动力弦（MAC）前缘的距离 ÷ 平均气动力弦长</strong>的百分数表示。<br>
+易错点：重心位置仅关注<strong>纵轴前后</strong>，不关注上下、左右位置。</p>
+</blockquote>
+<h2 id="7-2-三大操纵力矩与对应舵面">7.2 三大操纵力矩与对应舵面</h2>
+<ol>
+<li><strong>俯仰力矩</strong>：绕横轴，控制飞机抬头/低头 → <strong>升降舵</strong>操纵</li>
+<li><strong>偏航力矩</strong>：绕立轴，控制机头左右偏转 → <strong>方向舵</strong>操纵</li>
+<li><strong>滚转力矩</strong>：绕纵轴，控制机翼左右倾斜 → <strong>副翼</strong>操纵</li>
+</ol>
+<h2 id="7-3-重心前后限【补充必考考点】">7.3 重心前后限【补充必考考点】</h2>
+<ul>
+<li><strong>重心前限</strong>：纵向操纵性的极限边界。重心过于靠前，升降舵操纵力矩不足，无法拉起机头，着陆阶段易出现无法拉平的风险</li>
+<li><strong>重心后限</strong>：纵向稳定性的极限边界。重心过于靠后，超过气动焦点后，飞机变为纵向静不稳定，姿态极易发散、失控</li>
+<li>常规固定翼无人机的重心安全范围，通常在平均气动力弦的5%~35%之间</li>
+</ul>
+<hr>
+<h1>八、固定翼无人机的平衡与稳定性</h1>
+<h2 id="8-1-飞机平衡核心条件">8.1 飞机平衡核心条件</h2>
+<p>飞机保持平衡的充要条件：<strong>所有外力的合力为0，所有外力矩的合力为0</strong>。</p>
+<h2 id="8-2-俯仰平衡（纵向平衡）三种状态">8.2 俯仰平衡（纵向平衡）三种状态</h2>
+<ol>
+<li>机翼升力正好作用在重心上，无额外俯仰力矩</li>
+<li>升力作用点在重心前方 → 水平尾翼产生<strong>正升力</strong>平衡抬头力矩</li>
+<li>升力作用点在重心后方 → 水平尾翼产生<strong>负升力</strong>平衡低头力矩（常规布局主流状态）</li>
+</ol>
+<h2 id="8-3-方向平衡（航向平衡-立轴）">8.3 方向平衡（航向平衡/立轴）</h2>
+<ul>
+<li>核心作用：抵抗侧滑、阻止机头无规则左右偏转</li>
+<li>核心稳定部件：<strong>垂直尾翼</strong></li>
+<li>三种稳定状态：
+<ol>
+<li><strong>静稳定</strong>：出现侧滑后，垂尾产生恢复力矩，机头自动回正</li>
+<li><strong>静不稳定</strong>：侧滑后偏航力矩持续加大，机头越偏越远</li>
+<li><strong>中性稳定</strong>：侧滑后保持新姿态，无恢复趋势、无加剧趋势</li>
+</ol>
+</li>
+</ul>
+<h2 id="8-4-横向平衡（横滚平衡-纵轴）">8.4 横向平衡（横滚平衡/纵轴）</h2>
+<ul>
+<li>核心作用：维持机翼水平，防止无规则侧倾滚转</li>
+<li>核心影响因素：上反角、后掠角、上单/下单翼布局、副翼</li>
+<li>三种稳定状态：静稳定、静不稳定、中性稳定</li>
+</ul>
+<h2 id="8-5-静稳定性与动稳定性【补充考点】">8.5 静稳定性与动稳定性【补充考点】</h2>
+<ul>
+<li><strong>静稳定性</strong>：飞机受扰动偏离原姿态后，<strong>是否有自动恢复的趋势</strong>，是姿态恢复的前提</li>
+<li><strong>动稳定性</strong>：飞机受扰动后，姿态振荡<strong>是否会随时间逐渐衰减</strong>，静稳定是动稳定的必要不充分条件</li>
+<li>【补充】纵向振荡：短周期振荡（俯仰振荡，频率高、阻尼大，易修正）、长周期振荡（浮沉振荡，频率低、阻尼小，不易察觉）</li>
+</ul>
+<h2 id="8-6-纵向稳定性核心规律【必考口诀】">8.6 纵向稳定性核心规律【必考口诀】</h2>
+<ul>
+<li>重心<strong>前移</strong> → 纵向安定性<strong>增强</strong></li>
+<li>重心<strong>后移</strong> → 纵向安定性<strong>减弱</strong></li>
+<li>常规布局固定翼：<strong>气动焦点永远在重心后方</strong></li>
+</ul>
+<p><strong>力矩原理</strong></p>
+<ul>
+<li>机翼升力作用点在重心后方 → 天然产生低头力矩</li>
+<li>水平尾翼通过负升力压住机头，维持俯仰平衡</li>
+</ul>
+<p><strong>重心位置影响</strong></p>
+<ul>
+<li>重心靠前：恢复力臂变大、低头恢复力矩强，受扰动后自动回正能力强</li>
+<li>重心靠后：恢复力臂变小、恢复力矩弱，姿态易发散、易失控</li>
+</ul>
+<p><strong>背诵口诀</strong>：焦点在后，重心在前；重心越靠前，稳定性越强；重心越靠后，稳定性越弱。</p>
+<blockquote>
+<p>易错点：重心<strong>仅影响纵向稳定性</strong>，不直接影响横向、方向稳定性。</p>
+</blockquote>
+<hr>
+<h1>九、三轴阻尼力矩核心考点</h1>
+<h2 id="9-1-三轴与阻尼对应关系【必背】">9.1 三轴与阻尼对应关系【必背】</h2>
+<ol>
+<li>纵向（俯仰） → 绕<strong>横轴</strong></li>
+<li>横向（滚转） → 绕<strong>纵轴</strong></li>
+<li>方向（偏航） → 绕<strong>立轴</strong></li>
+</ol>
+<h2 id="9-2-阻尼力矩核心来源【满分考点】">9.2 阻尼力矩核心来源【满分考点】</h2>
+<ul>
+<li><strong>纵向阻尼（俯仰）</strong>：核心产生部件 → <strong>水平尾翼</strong></li>
+<li><strong>横向阻尼（滚转）</strong>：核心产生部件 → <strong>机翼</strong></li>
+<li><strong>方向阻尼（偏航）</strong>：核心产生部件 → <strong>垂直尾翼</strong></li>
+</ul>
+<h2 id="9-3-核心作用原理">9.3 核心作用原理</h2>
+<p>阻尼力矩是被动空气阻力力矩，核心作用是<strong>抑制飞机姿态摆动</strong>，而非直接改平姿态：</p>
+<ol>
+<li>纵向阻尼：抑制飞机抬头/低头的俯仰摆动</li>
+<li>横向阻尼：抑制机翼左右倾斜的滚转摆动</li>
+<li>方向阻尼：抑制机头左右摇摆的偏航摆动</li>
+</ol>
+<h2 id="9-4-记忆口诀">9.4 记忆口诀</h2>
+<p>纵向俯仰看平尾，横向滚转看机翼，方向偏航看垂尾。</p>
+<hr>
+<h1>十、迎角与压力中心、气动焦点</h1>
+<h2 id="10-1-核心结论【考试必背】">10.1 核心结论【考试必背】</h2>
+<ol>
+<li>迎角增大 → <strong>压力中心前移</strong></li>
+<li>迎角减小 → <strong>压力中心后移</strong></li>
+</ol>
+<h2 id="10-2-原理通俗理解">10.2 原理通俗理解</h2>
+<ul>
+<li>机翼升力主要来自<strong>上表面前段的负压区</strong></li>
+<li>大迎角：机翼前段气流加速强、吸力大 → 气动力合力作用点前移</li>
+<li>小迎角：机翼前段气流平缓，后半段气动力占比提升 → 气动力合力作用点后移</li>
+</ul>
+<h2 id="10-3-易混概念核心区分【高频易错】">10.3 易混概念核心区分【高频易错】</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">名称</th>
+<th style="text-align:left">核心特性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>压力中心（CP）</strong></td>
+<td style="text-align:left">位置随<strong>迎角变化</strong>前后移动，是气动力合力的作用点</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>气动焦点（AC）</strong></td>
+<td style="text-align:left">位置<strong>固定不变</strong>，不随迎角改变，常规翼型约在25%弦长处</td>
+</tr>
+</tbody>
+</table>
+<h2 id="10-4-记忆口诀">10.4 记忆口诀</h2>
+<p>大迎角，压心前；小迎角，压心后。</p>
+<hr>
+<h1>十一、机翼关键角度与侧滑操纵考点</h1>
+<h2 id="11-1-机翼关键角度定义【基础考点】">11.1 机翼关键角度定义【基础考点】</h2>
+<ol>
+<li><strong>后掠角</strong>：机翼1/4弦线与机身中心线垂线的夹角，无特殊说明均以此为准</li>
+<li><strong>安装角</strong>：机翼弦线与机身轴线的夹角，为固定角度，不随飞行姿态改变</li>
+<li><strong>上反角</strong>：机翼向上翘起的角度，用于增强横向稳定性</li>
+<li><strong>迎角</strong>：机翼弦线与相对气流的夹角，为动态角度，随飞行姿态实时改变</li>
+</ol>
+<blockquote>
+<p>易错点：</p>
+<ol>
+<li>安装角是<strong>机翼与机身的固定夹角</strong>，迎角是<strong>机翼与气流的动态夹角</strong>，二者完全不同，不可混淆</li>
+<li>后掠角默认指“1/4弦线后掠角”，不是前缘/后缘后掠角</li>
+</ol>
+</blockquote>
+<h2 id="11-2-横向静稳定性核心来源【修正原知识点偏差】">11.2 横向静稳定性核心来源【修正原知识点偏差】</h2>
+<ol>
+<li><strong>上反角</strong>：飞机侧滑时，迎风侧机翼有效迎角增大，升力提升，背风侧迎角减小，升力降低，产生<strong>滚转恢复力矩</strong>，使飞机自动改平，是横向静稳定性的核心来源</li>
+<li><strong>后掠角</strong>：飞机侧滑时，迎风侧机翼垂直于前缘的有效速度更大，升力提升，背风侧有效速度更小，升力降低，产生<strong>滚转恢复力矩</strong>，提供横向静稳定性</li>
+</ol>
+<h2 id="11-3-侧滑相关核心考点【必考·修正原知识点偏差】">11.3 侧滑相关核心考点【必考·修正原知识点偏差】</h2>
+<ol>
+<li><strong>侧滑角定义</strong>：空速向量与飞机对称面的夹角，空速在对称面左侧为左侧滑，在右侧为右侧滑</li>
+<li><strong>左侧滑特性</strong>：静稳定飞机出现左侧滑时，垂尾左侧迎角增大，产生向右的气动力，使机头<strong>自动向左转（回正）</strong>，对准来流方向</li>
+<li><strong>单纯副翼转弯侧滑</strong>：只压左副翼左转弯时，因逆偏航效应（右副翼下偏阻力增大），机头向右偏转，空速落在飞机对称面左侧，产生<strong>左侧滑</strong></li>
+</ol>
+<blockquote>
+<p>易错点：侧滑不是“飞机侧着飞”，核心是<strong>空速方向与飞机对称面不重合</strong>，分为左侧滑、右侧滑，与转弯方向不一定一致。</p>
+</blockquote>
+<h2 id="11-4-飞行操纵实操考点">11.4 飞行操纵实操考点</h2>
+<ol>
+<li><strong>侧风着陆侧滑修正</strong>：向侧风方向压杆带坡度，同时反舵抵制转弯，实现侧滑修正</li>
+<li><strong>坡度转弯操纵</strong>：坡度转弯时配合方向舵→实现<strong>协调转弯</strong>，可减小转弯半径、消除侧滑</li>
+<li><strong>侧风着陆升阻比保护</strong>：不降低升阻比的方法→用<strong>改变航向法</strong></li>
+</ol>
+<h2 id="11-5-三轴稳定性核心规律【核心必考】">11.5 三轴稳定性核心规律【核心必考】</h2>
+<h3 id="11-5-1-三轴与稳定性对应关系【必背】">11.5.1 三轴与稳定性对应关系【必背】</h3>
+<ol>
+<li>绕<strong>纵轴</strong>转动→对应<strong>横向稳定性</strong></li>
+<li>绕<strong>横轴</strong>转动→对应<strong>纵向稳定性</strong></li>
+<li>绕<strong>立轴</strong>转动→对应<strong>航向（方向）稳定性</strong></li>
+</ol>
+<h3 id="11-5-2-稳定性核心定义">11.5.2 稳定性核心定义</h3>
+<p>飞机受扰动偏离原飞行姿态，扰动消失后，飞机<strong>自动恢复原飞行姿态</strong>的能力，而非单纯回到零转角。</p>
+<h3 id="11-5-3-稳定性关联关系">11.5.3 稳定性关联关系</h3>
+<ol>
+<li>横向稳定性与航向稳定性：<strong>互相耦合</strong>，必须匹配适当，否则会出现荷兰滚或螺旋不稳定</li>
+<li>纵向稳定性与航向稳定性：<strong>互相独立</strong>，互不影响</li>
+</ol>
+<h3 id="11-5-4-稳定性核心影响因素">11.5.4 稳定性核心影响因素</h3>
+<ol>
+<li>增加水平尾翼面积→增大纵向静稳定性</li>
+<li>增加垂直尾翼面积→增大方向静稳定性</li>
+<li>方向稳定性最关键部件：<strong>垂直尾翼</strong></li>
+<li>重心位置<strong>仅影响纵向稳定性</strong></li>
+<li>常规布局气动焦点始终在重心后方；焦点后移→纵向静稳定性增强</li>
+</ol>
+<blockquote>
+<p>易错点：</p>
+<ol>
+<li>重心不影响横向、航向稳定性，仅改变纵向稳定性</li>
+<li>垂直尾翼仅影响方向稳定性，水平尾翼仅影响纵向稳定性</li>
+</ol>
+</blockquote>
+<h2 id="11-6-必背三大口诀">11.6 必背三大口诀</h2>
+<ol>
+<li>三轴对应：横轴—纵向俯仰；纵轴—横向滚转；立轴—航向偏航</li>
+<li>阻尼力矩：纵向平尾、横向机翼、方向垂尾</li>
+<li>尾翼作用：平尾管纵向，垂尾管航向，机翼管横向</li>
+</ol>
+<hr>
+<h1>十二、荷兰滚与螺旋不稳定</h1>
+<ol>
+<li>方向安定性过强、横侧稳定性过弱 → <strong>螺旋不稳定</strong></li>
+<li>横侧安定性过强、方向稳定性过弱 → <strong>荷兰滚（飘摆）</strong></li>
+</ol>
+<p><strong>核心原理</strong></p>
+<ul>
+<li>荷兰滚（飘摆）：横向稳、航向弱；飞机出现左右滚转+机头左右偏航的耦合振荡，来回晃动</li>
+<li>螺旋不稳定：航向稳、横向弱；飞机受扰动倾斜后，滚转与偏航耦合加剧，持续下坠形成螺旋俯冲</li>
+</ul>
+<p><strong>补充实操考点</strong></p>
+<ul>
+<li>荷兰滚改出：用方向舵协调偏航，抑制振荡</li>
+<li>螺旋不稳定改出：先推杆减小迎角，再改平坡度，最后修正航向</li>
+<li>设计原则：常规飞机设计会适当牺牲横向稳定性，优先保证方向稳定性，避免荷兰滚（螺旋不稳定发展缓慢，飞行员有充足时间修正）</li>
+</ul>
+<hr>
+<h1>十三、地面效应</h1>
+<h2 id="13-1-核心定义">13.1 核心定义</h2>
+<p>当固定翼无人机距离地面/水面高度 <strong>小于等于机翼翼展</strong> 时，地面阻挡气流向下扩散，改变机翼气动特性的现象；离地越近，地面效应越明显，高度超过翼展2倍时，地面效应基本消失。</p>
+<h2 id="13-2-产生原理">13.2 产生原理</h2>
+<ol>
+<li>正常飞行：机翼下气流向下散开，下洗气流大，诱导阻力高</li>
+<li>贴近地面：地面形成“挡板”，阻挡气流向下扩散，限制翼尖涡流发展</li>
+<li>直接效果：机翼下表面压力升高，整体升力增大，诱导阻力显著减小</li>
+</ol>
+<h2 id="13-3-地面效应核心变化与实操影响【CAAC必考】">13.3 地面效应核心变化与实操影响【CAAC必考】</h2>
+<ol>
+<li>同等迎角下，升力系数显著增大，临界迎角减小，飞机易提前失速</li>
+<li>诱导阻力大幅减小，相同推力下飞行速度增大</li>
+<li>着陆阶段，贴近地面时升力突增，飞机出现**“飘飞”**现象，导致着陆滑跑距离增长</li>
+<li>起飞阶段，地面效应可降低离地速度，缩短起飞滑跑距离</li>
+</ol>
+<hr>
+<h1>十四、翼型三个关键位置</h1>
+<p>翼型从前到后依次：前缘 → 翼弦 → 后缘</p>
+<p>三个核心关键点：</p>
+<ul>
+<li><strong>CG 重心</strong>：位置固定不变，常规布局在最前方</li>
+<li><strong>AC 气动焦点</strong>：位置固定不变，常规翼型约在25%弦长处</li>
+<li><strong>CP 压力中心</strong>：位置随迎角变化前后移动，常规状态在气动焦点后方</li>
+</ul>
+<p><strong>核心规律</strong></p>
+<ul>
+<li>迎角增大 → 压力中心前移</li>
+<li>迎角减小 → 压力中心后移</li>
+</ul>
+<hr>
+<h1>十五、诱导阻力考点全解析</h1>
+<h2 id="15-1-核心定义">15.1 核心定义</h2>
+<p>诱导阻力是<strong>机翼产生升力必须付出的气动代价</strong>，是产生升力时附带的额外阻力，零升状态下诱导阻力为0。</p>
+<h2 id="15-2-产生原理">15.2 产生原理</h2>
+<ol>
+<li>机翼正常产生升力时，上表面压力低、下表面压力高</li>
+<li>下表面高压气流从翼尖绕到上表面低压区，形成<strong>翼尖涡流</strong></li>
+<li>翼尖涡流拉扯后方气流形成<strong>下洗气流</strong>，使升力方向向后倾斜，产生向后的阻力分量，即为诱导阻力</li>
+</ol>
+<p><strong>记忆口诀</strong>：翼尖涡流 → 下洗气流 → 诱导阻力。</p>
+<h2 id="15-3-核心影响因素">15.3 核心影响因素</h2>
+<ol>
+<li>飞行速度：速度越慢，诱导阻力越大；速度越快，诱导阻力越小</li>
+<li>机翼升力：升力越大，诱导阻力越大</li>
+<li>展弦比：机翼展弦比越大（越细长），诱导阻力越小；展弦比越小（越短粗），诱导阻力越大</li>
+</ol>
+<h2 id="15-4-核心应用场景">15.4 核心应用场景</h2>
+<ul>
+<li>起降低速阶段：诱导阻力占总阻力的主导地位</li>
+<li>高速巡航阶段：寄生阻力占总阻力的主导地位</li>
+<li>地面效应阶段：贴近地面时，翼尖涡流被抑制，诱导阻力明显减小</li>
+</ul>
+<h2 id="15-5-核心减阻方法">15.5 核心减阻方法</h2>
+<ol>
+<li>采用大展弦比机翼</li>
+<li>机翼翼尖加装翼梢小翼/翼尖帆</li>
+<li>优化机翼梯形比，采用椭圆翼型平面形状</li>
+</ol>
+<blockquote>
+<p>易错点：诱导阻力不是摩擦阻力，是<strong>升力的副产品</strong>，与寄生阻力完全不同，零升状态下诱导阻力为0。</p>
+</blockquote>
+<hr>
+<h1>十六、下滑有利速度考点版</h1>
+<h2 id="16-1-核心定义">16.1 核心定义</h2>
+<p>飞机关闭油门无动力下滑时，<strong>下滑距离最远、下滑角最小</strong>的飞行速度，称为下滑有利速度，也叫<strong>最大升阻比速度</strong>。</p>
+<h2 id="16-2-核心原理">16.2 核心原理</h2>
+<p>无动力下滑时，飞机的阻力分为两类：</p>
+<ul>
+<li>低速范围：诱导阻力占主导</li>
+<li>高速范围：寄生阻力占主导<br>
+当两类阻力总和最小时，升阻比达到最大值，此时对应的速度即为下滑有利速度。</li>
+</ul>
+<p>核心公式：无动力下滑时，下滑角$\theta$满足</p>
+<p>$$<br>
+\tan\theta = \frac{1}{K}<br>
+$$</p>
+<p>升阻比$K$越大，下滑角越小，滑翔距离越远。</p>
+<h2 id="16-3-核心考点">16.3 核心考点</h2>
+<ol>
+<li>核心用途：发动机失效迫降时，保持此速度可获得最远滑翔距离，最大化迫降场地选择范围</li>
+<li>速度范围：比失速速度大，比正常巡航速度小</li>
+<li>核心别称：最大升阻比速度、最优滑翔速度</li>
+<li>补充特性：有利速度仅由飞机气动外形决定，与重量、高度无关；重量增大时，有利真空速同步增大，但升阻比不变</li>
+</ol>
+<p><strong>记忆口诀</strong>：停车下滑想飞远，保持有利速度最稳妥。</p>
+<blockquote>
+<p>易错点：下滑有利速度不是最慢速度，也不是最快速度，是<strong>总阻力最小、升阻比最大、滑翔距离最远</strong>的中间速度。—<br>
+title: 无人机飞行原理核心知识点（CAAC执照备考）<br>
+categories: 无人机<br>
+id: 201<br>
+tags:</p>
+</blockquote>
+<ul>
+<li>无人机</li>
+<li>CAAC</li>
+<li>飞行原理<br>
+abbrlink: dd8b8ec9<br>
+date: 2026-04-28 20:38:27<br>
+math: true # Butterfly主题Katex渲染必填项，开启本页公式渲染</li>
+</ul>
+<hr>
+<blockquote>
+<p>本文档为CAAC无人机执照考试「飞行原理」模块核心考点整理，覆盖大气基础、流体力学、固定翼气动特性、操纵原理、飞行稳定性等全维度内容，标注必考重点、易错点与记忆口诀，修正知识点偏差，<strong>100%适配Hexo Butterfly主题Katex公式渲染</strong>，兼顾理论学习与应试备考，可直接复制使用。</p>
+</blockquote>
+<hr>
+<h1>一、大气基础知识点</h1>
+<h2 id="1-1-大气核心特性-2">1.1 大气核心特性</h2>
+<h3 id="1-1-1-空气密度规律-2">1.1.1 空气密度规律</h3>
+<ul>
+<li>空气密度<strong>随高度增加而减小</strong></li>
+<li>空气密度与<strong>大气压力成正比</strong>，与<strong>绝对温度成反比</strong></li>
+</ul>
+<blockquote>
+<p>补充理解：温度越高，空气分子越活跃、体积膨胀，单位体积内质量越小；压力越低，空气越稀薄，两者都会导致密度下降。无人机在高原、高温环境下，需要更高转速/更大油门才能维持升力。<br>
+【CAAC补充考点】国际标准大气（ISA）海平面基准：气压101325Pa，温度15℃（288.15K），空气密度1.225kg/m³，为气动计算的标准参考条件。</p>
+</blockquote>
+<h3 id="1-1-2-大气层垂直分层（从低到高）-2">1.1.2 大气层垂直分层（从低到高）</h3>
+<p>对流层 → 平流层 → 中间层 → 电离层 → 散逸层</p>
+<blockquote>
+<p>核心考点：</p>
+<ol>
+<li>对流层高度范围0~11km，核心特征为<strong>气温随高度升高而降低</strong>（每升高1000m，气温平均下降6.5℃），空气垂直对流强烈，天气现象复杂，<strong>绝大多数民用无人机飞行均在对流层内</strong></li>
+<li>平流层高度范围11~50km，11~20km为同温层，气温恒定-56.5℃，气流平稳、阻力小，民航客机多在<strong>平流层底部</strong>巡航</li>
+</ol>
+</blockquote>
+<h3 id="1-1-3-气体黏性特性-2">1.1.3 气体黏性特性</h3>
+<p>气体黏性<strong>随温度升高而增大</strong></p>
+<blockquote>
+<p>补充理解：空气黏性的本质是分子间的内摩擦阻力。温度越高，空气分子热运动越剧烈，内摩擦阻力越大，会直接增加无人机飞行的摩擦阻力。<br>
+【高频易错点】液体黏性随温度升高而减小，与气体规律完全相反，为判断题必考陷阱。</p>
+</blockquote>
+<h2 id="1-2-空气密度计算公式-2">1.2 空气密度计算公式</h2>
+<p>核心公式（理想气体状态方程）：</p>
+<p>$$<br>
+\rho = \frac{P}{R \cdot T}<br>
+$$</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">符号</th>
+<th style="text-align:left">物理含义</th>
+<th style="text-align:left">单位/取值说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">$\rho$</td>
+<td style="text-align:left">空气密度</td>
+<td style="text-align:left">$kg/m^3$</td>
+</tr>
+<tr>
+<td style="text-align:left">$P$</td>
+<td style="text-align:left">大气压力</td>
+<td style="text-align:left">帕斯卡（Pa）</td>
+</tr>
+<tr>
+<td style="text-align:left">$T$</td>
+<td style="text-align:left">绝对温度</td>
+<td style="text-align:left">开尔文（K），换算公式：<strong>绝对温度 = 摄氏温度 + 273.15</strong></td>
+</tr>
+<tr>
+<td style="text-align:left">$R$</td>
+<td style="text-align:left">干空气气体常数</td>
+<td style="text-align:left">固定值 $\approx 287\ J/(kg·K)$</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>高频易错点：</p>
+<ol>
+<li>计算时温度必须使用<strong>开尔文（K）</strong>，严禁直接代入摄氏温度（℃）</li>
+<li>压力越低、温度越高，空气密度越小，无人机升力性能会显著下降</li>
+</ol>
+</blockquote>
+<hr>
+<h1>二、流体力学基础定理</h1>
+<h2 id="2-1-连续性定理-2">2.1 连续性定理</h2>
+<p>核心公式（低速定常流动）：</p>
+<p>$$<br>
+A_1 V_1 = A_2 V_2<br>
+$$</p>
+<ul>
+<li>$A_1、A_2$：同一流管前后两个截面的面积</li>
+<li>$V_1、V_2$：对应截面处的气流速度</li>
+</ul>
+<blockquote>
+<p>核心结论：低速定常流动的理想流体，气流速度与流管截面积成反比——<strong>流管变窄→流速加快；流管变宽→流速减慢</strong>。这是机翼上表面气流加速的核心理论基础。<br>
+【补充前提】适用条件：低速、定常、不可压缩、连续介质的理想流体。</p>
+</blockquote>
+<h2 id="2-2-伯努利定理-2">2.2 伯努利定理</h2>
+<p>核心公式（同一流管内）：</p>
+<p>$$<br>
+P_0 = \frac{1}{2}\rho V^2 + P<br>
+$$</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">符号</th>
+<th style="text-align:left">物理含义</th>
+<th style="text-align:left">核心特性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">$P_0$</td>
+<td style="text-align:left">总压</td>
+<td style="text-align:left">同一流管内恒定不变</td>
+</tr>
+<tr>
+<td style="text-align:left">$\frac{1}{2}\rho V^2$</td>
+<td style="text-align:left">动压</td>
+<td style="text-align:left">与气流速度的平方成正比，气流运动产生的压力</td>
+</tr>
+<tr>
+<td style="text-align:left">$P$</td>
+<td style="text-align:left">静压</td>
+<td style="text-align:left">空气本身的固有压力，与动压此消彼长</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>必考核心结论：同一流管的任意截面上，<strong>动压 + 静压 = 总压 = 恒定值</strong></p>
+<ul>
+<li>动压增大 → 静压减小</li>
+<li>动压减小 → 静压增大</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>易错提醒：</p>
+<ol>
+<li>伯努利定理的适用范围：<strong>马赫数Ma&lt;0.3的低速流动</strong>，此时空气压缩性影响可忽略，视为不可压缩流体；Ma&gt;0.3时定理不再适用</li>
+<li>机翼升力的核心来源：上表面流管收窄→流速加快→动压增大→静压降低，上下表面形成压力差，从而产生向上的升力<br>
+【补充考点】无人机空速管（皮托管）的核心原理：通过测量总压与静压的差值（动压），计算得到飞行空速。</li>
+</ol>
+</blockquote>
+<h2 id="2-3-两大定理联动逻辑-2">2.3 两大定理联动逻辑</h2>
+<blockquote>
+<p>升力产生的基础逻辑：</p>
+<ol>
+<li><strong>连续性定理</strong>：解释「机翼上表面气流为什么更快」（机翼上表面凸起，流管有效截面积收窄）</li>
+<li><strong>伯努利定理</strong>：解释「流速更快为什么会产生升力」（流速快→动压大→静压小，上下表面形成压力差）<br>
+两者结合，构成了机翼产生升力的核心底层逻辑。</li>
+</ol>
+</blockquote>
+<hr>
+<h1>三、固定翼无人机机翼核心参数</h1>
+<h2 id="3-1-机翼平面形状核心参数-2">3.1 机翼平面形状核心参数</h2>
+<h3 id="3-1-1-机翼面积（-S-）-2">3.1.1 机翼面积（$S$）</h3>
+<ul>
+<li><strong>定义</strong>：机翼在水平面上的投影面积（含机身遮挡部分）</li>
+<li><strong>核心影响</strong>：面积越大，可产生的升力越大，更适配载重、低速、长航时飞行场景</li>
+</ul>
+<h3 id="3-1-2-翼展（-b-）-2">3.1.2 翼展（$b$）</h3>
+<ul>
+<li><strong>定义</strong>：机翼左右翼尖最外侧之间的直线距离</li>
+<li><strong>核心作用</strong>：描述机翼横向尺寸，是计算展弦比的核心参数</li>
+</ul>
+<h3 id="3-1-3-平均几何弦长与平均气动力弦长-2">3.1.3 平均几何弦长与平均气动力弦长</h3>
+<h4 id="平均几何弦长-2">平均几何弦长</h4>
+<ul>
+<li><strong>定义</strong>：机翼面积与翼展的比值，代表机翼从前缘到后缘的平均宽度</li>
+<li>计算公式：</li>
+</ul>
+<p>$$<br>
+\text{平均几何弦长} = \frac{\text{机翼面积}S}{\text{翼展}b}<br>
+$$</p>
+<h4 id="平均气动力弦长（MAC）【CAAC必考】-2">平均气动力弦长（MAC）【CAAC必考】</h4>
+<ul>
+<li><strong>定义</strong>：表征机翼气动力特性的等效弦长，是无人机重心位置、气动焦点位置的基准参考</li>
+<li><strong>核心应用</strong>：无人机重心位置用「重心到MAC前缘的距离 ÷ MAC长度」的百分数表示，为执照考试核心考点</li>
+</ul>
+<h3 id="3-1-4-展弦比（-A-）-2">3.1.4 展弦比（$A$）</h3>
+<ul>
+<li><strong>定义</strong>：描述机翼“细长/短粗”程度的核心参数</li>
+<li>计算公式：</li>
+</ul>
+<p>$$<br>
+A = \frac{b^2}{S} = \frac{b}{\text{平均几何弦长}}<br>
+$$</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">类型</th>
+<th style="text-align:left">特征</th>
+<th style="text-align:left">适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">大展弦比</td>
+<td style="text-align:left">机翼细长</td>
+<td style="text-align:left">滑翔机、长航时测绘无人机，巡航效率高、诱导阻力小</td>
+</tr>
+<tr>
+<td style="text-align:left">小展弦比</td>
+<td style="text-align:left">机翼短粗</td>
+<td style="text-align:left">高速无人机、竞速无人机，机动性强、失速迎角大、高速性能好</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-1-5-梯形比（尖削比）-2">3.1.5 梯形比（尖削比）</h3>
+<ul>
+<li><strong>定义</strong>：机翼翼尖弦长 ÷ 翼根弦长（翼根：机翼与机身连接处；翼尖：机翼最外侧）</li>
+<li><strong>核心影响</strong>：
+<ul>
+<li>比值=1：等弦平直翼</li>
+<li>比值越小：机翼从翼根到翼尖收束越明显，可优化展向升力分布、降低诱导阻力</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-1-6-后掠角-2">3.1.6 后掠角</h3>
+<ul>
+<li><strong>定义</strong>：机翼特征线与机身对称面垂线之间的夹角，无特殊说明时，默认指<strong>1/4弦线后掠角</strong></li>
+<li>常见分类：前缘后掠角、1/4弦线后掠角、中弦线后掠角、后缘后掠角</li>
+<li>正负定义：正角度=机翼后掠（主流设计）；负角度=机翼前掠（少见）</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">类型</th>
+<th style="text-align:left">角度范围</th>
+<th style="text-align:left">适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">平直翼</td>
+<td style="text-align:left">后掠角＜20°</td>
+<td style="text-align:left">亚声速、低速长航时无人机</td>
+</tr>
+<tr>
+<td style="text-align:left">后掠翼</td>
+<td style="text-align:left">后掠角＞25°</td>
+<td style="text-align:left">高亚声速、超声速无人机</td>
+</tr>
+<tr>
+<td style="text-align:left">三角翼</td>
+<td style="text-align:left">前缘后掠角≈60°</td>
+<td style="text-align:left">超声速无尾式固定翼无人机</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>【补充考点】后掠翼的核心作用：提高临界马赫数，延缓激波产生，降低高速飞行的波阻，提升高速飞行性能。</p>
+</blockquote>
+<h3 id="3-1-7-上反角与下反角-2">3.1.7 上反角与下反角</h3>
+<ul>
+<li><strong>上反角</strong>：机翼基准面与水平面的夹角，机翼从根部向外向上翘起，核心作用是<strong>增强横向静稳定性</strong></li>
+<li><strong>下反角</strong>：上反角为负值，机翼从根部向外向下倾斜，核心作用是<strong>降低横滚稳定性，提升操控灵活性</strong></li>
+</ul>
+<h2 id="3-2-机翼核心气动公式-2">3.2 机翼核心气动公式</h2>
+<h3 id="3-2-1-升力公式-2">3.2.1 升力公式</h3>
+<p>$$<br>
+L = \frac{1}{2}\rho V^2 S C_L<br>
+$$</p>
+<h3 id="3-2-2-阻力公式-2">3.2.2 阻力公式</h3>
+<p>$$<br>
+D = \frac{1}{2}\rho V^2 S C_D<br>
+$$</p>
+<h3 id="3-2-3-升力系数公式-2">3.2.3 升力系数公式</h3>
+<p>$$<br>
+C_L = \frac{L}{\frac{1}{2}\rho V^2 S}<br>
+$$</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">符号</th>
+<th style="text-align:left">物理含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">$L$</td>
+<td style="text-align:left">升力</td>
+</tr>
+<tr>
+<td style="text-align:left">$D$</td>
+<td style="text-align:left">阻力</td>
+</tr>
+<tr>
+<td style="text-align:left">$C_L$</td>
+<td style="text-align:left">升力系数</td>
+</tr>
+<tr>
+<td style="text-align:left">$C_D$</td>
+<td style="text-align:left">阻力系数</td>
+</tr>
+<tr>
+<td style="text-align:left">$\rho$</td>
+<td style="text-align:left">空气密度</td>
+</tr>
+<tr>
+<td style="text-align:left">$V$</td>
+<td style="text-align:left">相对气流速度（飞行速度）</td>
+</tr>
+<tr>
+<td style="text-align:left">$S$</td>
+<td style="text-align:left">机翼面积</td>
+</tr>
+<tr>
+<td style="text-align:left">$\frac{1}{2}\rho V^2$</td>
+<td style="text-align:left">飞行动压</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>补充说明：翼尖涡流<br>
+有限翼展机翼的下翼面压力始终高于上翼面，下表面的高压气流会绕过翼尖流向上表面的低压区，从而形成绕翼尖的空气涡流，是诱导阻力的核心来源。</p>
+</blockquote>
+<hr>
+<h1>四、机翼操纵装置与三轴运动原理</h1>
+<h2 id="4-1-机翼核心操纵装置-2">4.1 机翼核心操纵装置</h2>
+<h3 id="4-1-1-副翼-2">4.1.1 副翼</h3>
+<ul>
+<li><strong>安装位置</strong>：机翼后缘、靠近翼尖的可动舵面，左右对称布置</li>
+<li><strong>核心作用</strong>：控制飞机绕纵轴的<strong>滚转运动</strong></li>
+<li><strong>操纵原理</strong>：
+<ul>
+<li>左副翼上偏、右副翼下偏→左侧机翼升力减小、右侧升力增大→飞机向左滚转</li>
+<li>右副翼上偏、左副翼下偏→右侧机翼升力减小、左侧升力增大→飞机向右滚转</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>【补充考点】副翼反效（逆操纵）：高速飞行时，机翼扭转导致副翼偏转产生的力矩与预期相反，是高速飞行的核心风险点。</p>
+</blockquote>
+<h3 id="4-1-2-襟翼-2">4.1.2 襟翼</h3>
+<ul>
+<li><strong>安装位置</strong>：机翼后缘、靠近翼根的可动舵面</li>
+<li><strong>核心作用</strong>：起飞/着陆低速阶段<strong>增升</strong>，同时同步增大阻力</li>
+<li><strong>工作效果</strong>：
+<ul>
+<li>升力增大：襟翼下偏增大机翼弯度与有效面积，大幅提升升力系数，低速下即可获得足够升力</li>
+<li>阻力增大：襟翼展开增大迎风面积与气流分离，同步提升压差阻力，可缩短着陆滑跑距离</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>核心考点：带襟翼无人机放下襟翼时，<strong>升力与阻力同时增大</strong>，最大升力系数提升，失速速度降低。</p>
+</blockquote>
+<h3 id="4-1-3-前缘缝翼-2">4.1.3 前缘缝翼</h3>
+<ul>
+<li><strong>安装位置</strong>：机翼前缘的可动装置，伸出后与机翼主体形成缝隙</li>
+<li><strong>核心作用</strong>：低速大迎角状态下<strong>增升、延缓气流分离</strong>，提升失速迎角</li>
+<li><strong>增升原理</strong>：缝翼伸出后，下表面高压高速气流通过缝隙吹向上表面附面层，补充气流能量，推迟气流分离，让机翼可在更大迎角下保持升力，常与襟翼配合用于起降阶段。</li>
+</ul>
+<h3 id="4-1-4-扰流板（减速板-减升装置）-2">4.1.4 扰流板（减速板/减升装置）</h3>
+<ul>
+<li><strong>安装位置</strong>：机翼上表面、靠近翼根的可动面板</li>
+<li><strong>核心作用</strong>：<strong>减升、增阻</strong>，属于减升装置</li>
+<li><strong>工作原理</strong>：扰流板向上抬起，破坏机翼上表面平滑气流，导致气流提前分离，升力大幅下降，同时显著增大飞行阻力</li>
+</ul>
+<blockquote>
+<p>核心考点：常用于着陆时减速、减小升力，防止飞机飘飞；部分无人机也用它辅助滚转控制。</p>
+</blockquote>
+<h2 id="4-2-飞机三轴与对应运动【CAAC必背】-2">4.2 飞机三轴与对应运动【CAAC必背】</h2>
+<p>飞机的所有运动均围绕三个互相垂直的轴进行，对应三种核心运动与操纵舵面：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">轴的名称</th>
+<th style="text-align:left">定义</th>
+<th style="text-align:left">绕轴的运动</th>
+<th style="text-align:left">核心控制舵面</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>纵轴（滚转轴）</strong></td>
+<td style="text-align:left">从机头贯穿到机尾，沿机身长度方向</td>
+<td style="text-align:left">滚转（左右倾斜）</td>
+<td style="text-align:left">副翼</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>横轴（俯仰轴）</strong></td>
+<td style="text-align:left">左右贯穿机翼，垂直于纵轴</td>
+<td style="text-align:left">俯仰（抬头/低头）</td>
+<td style="text-align:left">升降舵</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>立轴（偏航轴）</strong></td>
+<td style="text-align:left">从机身顶部贯穿到底部，垂直于水平面</td>
+<td style="text-align:left">偏航（机头左右偏转）</td>
+<td style="text-align:left">方向舵</td>
+</tr>
+</tbody>
+</table>
+<h3 id="补充舵面操纵原理-2">补充舵面操纵原理</h3>
+<ol>
+<li><strong>升降舵</strong>：安装在水平尾翼后缘，向上偏转→平尾负升力增大→机头上仰；向下偏转→平尾正升力增大→机头下俯</li>
+<li><strong>方向舵</strong>：安装在垂直尾翼后缘，向左偏转→垂尾产生向右气动力→机头左偏；向右偏转→垂尾产生向左气动力→机头右偏</li>
+</ol>
+<blockquote>
+<p>核心操纵规律：</p>
+<ul>
+<li>操纵副翼时，飞机绕<strong>纵轴</strong>做滚转运动</li>
+<li>操纵升降舵时，飞机绕<strong>横轴</strong>做俯仰运动</li>
+<li>操纵方向舵时，飞机绕<strong>立轴</strong>做偏航运动<br>
+补充说明：实际飞行中，三轴运动常互相耦合，比如副翼偏转也会带来轻微的偏航趋势（逆偏航效应）。</li>
+</ul>
+</blockquote>
+<hr>
+<h1>五、固定翼无人机的飞行阻力</h1>
+<h2 id="5-1-附面层基础-2">5.1 附面层基础</h2>
+<p><strong>核心定义</strong>：空气流过固定翼无人机时，贴近机体表面、气流速度由主流速度逐渐降低为<strong>0</strong>的一层空气流动层。</p>
+<ul>
+<li>核心分类：<strong>层流附面层</strong>、<strong>紊流附面层</strong></li>
+</ul>
+<blockquote>
+<p>知识点补充：层流附面层气流平稳、摩擦阻力小；紊流附面层气流紊乱、摩擦阻力大，但不易发生气流分离。<br>
+【补充考点】附面层转捩：层流附面层在一定条件下会转变为紊流附面层，转捩点越靠后，摩擦阻力越小，层流翼型的核心设计目标就是延缓转捩。<br>
+易错点：附面层只存在于<strong>物体表面</strong>，并非整个空间气流；气流速度是<strong>逐步降为零</strong>，不是突然变为零。</p>
+</blockquote>
+<h2 id="5-2-四大基础阻力类型-2">5.2 四大基础阻力类型</h2>
+<ol>
+<li>
+<p><strong>摩擦阻力【重点】</strong></p>
+<ul>
+<li>成因：空气<strong>黏性</strong>与无人机表面摩擦产生</li>
+<li>影响因素：空气黏性越大、机体表面越粗糙、机体表面积越大 → 摩擦阻力越大</li>
+</ul>
+</li>
+<li>
+<p><strong>压差阻力【重点】</strong></p>
+<ul>
+<li>成因：机翼前缘流速慢、压力大；后缘气流分离形成涡流、压力小，<strong>前后压力差</strong>形成的阻力</li>
+<li>影响因素：与<strong>迎风面积、外形形状、气流相对位置</strong>密切相关，流线型外形可大幅降低压差阻力</li>
+</ul>
+</li>
+<li>
+<p><strong>诱导阻力【必考】</strong></p>
+<ul>
+<li>成因：<strong>产生升力必然附带的附加阻力</strong>，由翼尖涡流、下洗气流产生</li>
+<li>减阻方法：加装<strong>翼梢小翼</strong>、增大展弦比、优化机翼梯形比，削弱翼尖涡流、减小下洗速度，降低诱导阻力</li>
+</ul>
+</li>
+<li>
+<p><strong>干扰阻力【重点】</strong></p>
+<ul>
+<li>成因：机身、机翼、尾翼各部件<strong>气流互相干扰</strong>产生的额外阻力</li>
+<li>减阻方法：合理布局部件位置；结合部安装<strong>整流包皮</strong>，使气流圆滑过渡</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>易错点：诱导阻力<strong>不是</strong>摩擦/形状阻力，是<strong>升力的副产品</strong>；干扰阻力是<strong>部件间气流干扰额外产生</strong>的阻力，不是单一部件的固有阻力。</p>
+</blockquote>
+<h2 id="5-3-阻力大类划分与速度变化规律-2">5.3 阻力大类划分与速度变化规律</h2>
+<p><strong>两大核心分类【必背】</strong></p>
+<ul>
+<li><strong>升致阻力</strong>：即<strong>诱导阻力</strong>，与<strong>升力强相关</strong>，是产生升力的必然损耗，零升状态下为0</li>
+<li><strong>零升阻力（寄生阻力）</strong>：包含<strong>摩擦阻力+压差阻力+干扰阻力</strong>，与升力无直接关联，只要飞行就存在</li>
+</ul>
+<p><strong>速度变化规律【核心考点】</strong></p>
+<ul>
+<li>诱导阻力：飞行速度<strong>越大，阻力越小</strong>；低速大迎角时显著增大</li>
+<li>寄生阻力：飞行速度<strong>越大，阻力越大</strong>，与<strong>速度平方成正比</strong></li>
+</ul>
+<p><strong>飞行阶段阻力主导</strong></p>
+<ul>
+<li>低速起降阶段：<strong>诱导阻力</strong>占主导</li>
+<li>高速巡航阶段：<strong>寄生阻力</strong>占主导</li>
+</ul>
+<p><strong>最优临界状态</strong><br>
+诱导阻力 = 寄生阻力 → <strong>总阻力最小、升阻比最大</strong>，为无人机最优巡航工况</p>
+<blockquote>
+<p>知识点补充：高度越高空气越稀薄，同等飞行速度下，整体阻力会减小。<br>
+易错点：低速看诱导阻力，高速看寄生阻力；飞行中永远不存在阻力为0的状态。</p>
+</blockquote>
+<h2 id="5-4-针对性减阻措施【背诵】-2">5.4 针对性减阻措施【背诵】</h2>
+<ul>
+<li>减小飞机迎风面积、优化流线型外形 → 减小<strong>压差阻力</strong></li>
+<li>合理布局机体结构位置、加装整流包皮 → 减小<strong>干扰阻力</strong></li>
+<li>增大机翼展弦比、加装翼梢小翼 → 减小<strong>诱导阻力</strong></li>
+<li>优化机体表面光滑度、采用层流翼型 → 减小<strong>摩擦阻力</strong></li>
+</ul>
+<hr>
+<h1>六、固定翼无人机低速空气动力性能</h1>
+<h2 id="6-1-升力核心影响因素-2">6.1 升力核心影响因素</h2>
+<p><strong>核心影响维度</strong>：迎角、气流速度、空气密度、机翼形状、机翼面积</p>
+<ul>
+<li>飞行高度越低、飞行速度越大、机翼面积越大 → 升力越大</li>
+<li>机翼形状固定时，升力系数、阻力系数<strong>仅由迎角决定</strong></li>
+</ul>
+<blockquote>
+<p>易错点：升力并非只由速度决定，<strong>迎角改变也能大幅改变升力大小</strong>。</p>
+</blockquote>
+<h2 id="6-2-迎角核心概念【必考】-2">6.2 迎角核心概念【必考】</h2>
+<p><strong>迎角定义</strong>：机翼前进方向（相对气流方向）与<strong>翼弦</strong>的夹角，又称攻角。</p>
+<p><strong>核心关键迎角</strong></p>
+<ul>
+<li><strong>零升迎角</strong>：升力系数为0时对应的迎角
+<ul>
+<li>对称翼型：零升迎角 = <strong>0°</strong></li>
+<li>非对称翼型：零升迎角为<strong>负值</strong></li>
+</ul>
+</li>
+<li><strong>临界迎角（失速迎角）</strong>：升力系数达到<strong>最大值</strong>时对应的迎角；超过该迎角即发生<strong>失速</strong></li>
+</ul>
+<p><strong>升力系数变化规律</strong><br>
+迎角增大 → 升力系数先线性增大；接近临界迎角时增速放缓；<strong>超过临界迎角后，升力系数骤降</strong>。</p>
+<blockquote>
+<p>知识点补充：最大升力系数越大，无人机<strong>起飞滑跑所需速度越小</strong>，起降性能越好。<br>
+【核心易错点】失速不是飞机发动机停转，是<strong>迎角超过临界值后气流严重分离、升力急剧下降</strong>的现象；失速只与迎角有关，与速度、飞行姿态无关，只要迎角超标，任何速度都会失速。</p>
+</blockquote>
+<h2 id="6-3-失速速度【CAAC必考补充】-2">6.3 失速速度【CAAC必考补充】</h2>
+<p>失速速度是飞机刚达到临界迎角时对应的飞行速度，是无人机安全飞行的核心边界，核心公式：</p>
+<p>$$<br>
+V_s = \sqrt{\frac{2W}{\rho S C_{Lmax}}}<br>
+$$</p>
+<p>其中$W$为无人机重量，$C_{Lmax}$为最大升力系数</p>
+<p><strong>影响失速速度的核心因素</strong></p>
+<ol>
+<li>重量越大，失速速度越大</li>
+<li>载荷因数越大，失速速度越大</li>
+<li>放下襟翼，$C_{Lmax}$增大，失速速度减小</li>
+<li>高原/高温环境，空气密度$\rho$减小，失速速度增大</li>
+</ol>
+<h2 id="6-4-阻力系数曲线规律-2">6.4 阻力系数曲线规律</h2>
+<ul>
+<li>小迎角范围：阻力系数小、增长缓慢</li>
+<li>大迎角范围：阻力系数快速增大</li>
+<li>超过临界迎角：阻力系数<strong>急剧暴涨</strong></li>
+<li>阻力系数永远不为0，最小值为<strong>零升阻力系数</strong></li>
+</ul>
+<h2 id="6-5-升阻比【核心考点】-2">6.5 升阻比【核心考点】</h2>
+<p><strong>核心公式</strong>：</p>
+<p>$$<br>
+K = \frac{L}{D} = \frac{C_L}{C_D}<br>
+$$</p>
+<ul>
+<li>升阻比越大：同等升力下阻力越小，无人机气动性能越好、燃油/电能效率越高，航时、航程越长</li>
+<li><strong>有利迎角</strong>：升阻比达到<strong>最大值</strong>的迎角，此时平飞所需推力最小、飞行效率最高</li>
+</ul>
+<p><strong>升阻比变化规律</strong></p>
+<ol>
+<li>中小迎角范围：迎角增大 → 升阻比持续上升</li>
+<li>超过有利迎角：升力增速放缓、阻力暴增 → 升阻比快速下降</li>
+<li>临界迎角附近：气流严重分离 → 升阻比大幅降低</li>
+</ol>
+<h3 id="气动极曲线【CAAC难点考点】-2">气动极曲线【CAAC难点考点】</h3>
+<p>气动极曲线是以<strong>阻力系数$C_D$为横坐标，升力系数$C_L$为纵坐标</strong>绘制的曲线，完整反映无人机全迎角范围的升阻特性：</p>
+<ol>
+<li>从坐标原点向极曲线作切线，<strong>切线斜率=升阻比$K$</strong>，切点对应最大升阻比状态，切点迎角即为有利迎角</li>
+<li>曲线与纵轴交点对应零升迎角</li>
+<li>曲线最高点对应临界迎角（最大升力系数）</li>
+</ol>
+<blockquote>
+<p>实操考点：空速适度减小时，为保持飞行高度不变，必须<strong>增大迎角</strong>来维持升力恒定。<br>
+易错点：有利迎角 ≠ 临界迎角；有利迎角是飞行效率最高的迎角，临界迎角是升力系数最大的迎角，超过即失速。</p>
+</blockquote>
+<hr>
+<h1>七、固定翼无人机重心与操纵力矩</h1>
+<h2 id="7-1-重心核心定义-2">7.1 重心核心定义</h2>
+<p><strong>重心</strong>：无人机各部件重力的<strong>合力作用点</strong>；考试与实操中，重点关注<strong>机身纵轴的前后位置</strong>。</p>
+<blockquote>
+<p>【CAAC必考】重心位置表示方法：用<strong>重心到平均气动力弦（MAC）前缘的距离 ÷ 平均气动力弦长</strong>的百分数表示。<br>
+易错点：重心位置仅关注<strong>纵轴前后</strong>，不关注上下、左右位置。</p>
+</blockquote>
+<h2 id="7-2-三大操纵力矩与对应舵面-2">7.2 三大操纵力矩与对应舵面</h2>
+<ol>
+<li><strong>俯仰力矩</strong>：绕横轴，控制飞机抬头/低头 → <strong>升降舵</strong>操纵</li>
+<li><strong>偏航力矩</strong>：绕立轴，控制机头左右偏转 → <strong>方向舵</strong>操纵</li>
+<li><strong>滚转力矩</strong>：绕纵轴，控制机翼左右倾斜 → <strong>副翼</strong>操纵</li>
+</ol>
+<h2 id="7-3-重心前后限【补充必考考点】-2">7.3 重心前后限【补充必考考点】</h2>
+<ul>
+<li><strong>重心前限</strong>：纵向操纵性的极限边界。重心过于靠前，升降舵操纵力矩不足，无法拉起机头，着陆阶段易出现无法拉平的风险</li>
+<li><strong>重心后限</strong>：纵向稳定性的极限边界。重心过于靠后，超过气动焦点后，飞机变为纵向静不稳定，姿态极易发散、失控</li>
+<li>常规固定翼无人机的重心安全范围，通常在平均气动力弦的5%~35%之间</li>
+</ul>
+<hr>
+<h1>八、固定翼无人机的平衡与稳定性</h1>
+<h2 id="8-1-飞机平衡核心条件-2">8.1 飞机平衡核心条件</h2>
+<p>飞机保持平衡的充要条件：<strong>所有外力的合力为0，所有外力矩的合力为0</strong>。</p>
+<h2 id="8-2-俯仰平衡（纵向平衡）三种状态-2">8.2 俯仰平衡（纵向平衡）三种状态</h2>
+<ol>
+<li>机翼升力正好作用在重心上，无额外俯仰力矩</li>
+<li>升力作用点在重心前方 → 水平尾翼产生<strong>正升力</strong>平衡抬头力矩</li>
+<li>升力作用点在重心后方 → 水平尾翼产生<strong>负升力</strong>平衡低头力矩（常规布局主流状态）</li>
+</ol>
+<h2 id="8-3-方向平衡（航向平衡-立轴）-2">8.3 方向平衡（航向平衡/立轴）</h2>
+<ul>
+<li>核心作用：抵抗侧滑、阻止机头无规则左右偏转</li>
+<li>核心稳定部件：<strong>垂直尾翼</strong></li>
+<li>三种稳定状态：
+<ol>
+<li><strong>静稳定</strong>：出现侧滑后，垂尾产生恢复力矩，机头自动回正</li>
+<li><strong>静不稳定</strong>：侧滑后偏航力矩持续加大，机头越偏越远</li>
+<li><strong>中性稳定</strong>：侧滑后保持新姿态，无恢复趋势、无加剧趋势</li>
+</ol>
+</li>
+</ul>
+<h2 id="8-4-横向平衡（横滚平衡-纵轴）-2">8.4 横向平衡（横滚平衡/纵轴）</h2>
+<ul>
+<li>核心作用：维持机翼水平，防止无规则侧倾滚转</li>
+<li>核心影响因素：上反角、后掠角、上单/下单翼布局、副翼</li>
+<li>三种稳定状态：静稳定、静不稳定、中性稳定</li>
+</ul>
+<h2 id="8-5-静稳定性与动稳定性【补充考点】-2">8.5 静稳定性与动稳定性【补充考点】</h2>
+<ul>
+<li><strong>静稳定性</strong>：飞机受扰动偏离原姿态后，<strong>是否有自动恢复的趋势</strong>，是姿态恢复的前提</li>
+<li><strong>动稳定性</strong>：飞机受扰动后，姿态振荡<strong>是否会随时间逐渐衰减</strong>，静稳定是动稳定的必要不充分条件</li>
+<li>【补充】纵向振荡：短周期振荡（俯仰振荡，频率高、阻尼大，易修正）、长周期振荡（浮沉振荡，频率低、阻尼小，不易察觉）</li>
+</ul>
+<h2 id="8-6-纵向稳定性核心规律【必考口诀】-2">8.6 纵向稳定性核心规律【必考口诀】</h2>
+<ul>
+<li>重心<strong>前移</strong> → 纵向安定性<strong>增强</strong></li>
+<li>重心<strong>后移</strong> → 纵向安定性<strong>减弱</strong></li>
+<li>常规布局固定翼：<strong>气动焦点永远在重心后方</strong></li>
+</ul>
+<p><strong>力矩原理</strong></p>
+<ul>
+<li>机翼升力作用点在重心后方 → 天然产生低头力矩</li>
+<li>水平尾翼通过负升力压住机头，维持俯仰平衡</li>
+</ul>
+<p><strong>重心位置影响</strong></p>
+<ul>
+<li>重心靠前：恢复力臂变大、低头恢复力矩强，受扰动后自动回正能力强</li>
+<li>重心靠后：恢复力臂变小、恢复力矩弱，姿态易发散、易失控</li>
+</ul>
+<p><strong>背诵口诀</strong>：焦点在后，重心在前；重心越靠前，稳定性越强；重心越靠后，稳定性越弱。</p>
+<blockquote>
+<p>易错点：重心<strong>仅影响纵向稳定性</strong>，不直接影响横向、方向稳定性。</p>
+</blockquote>
+<hr>
+<h1>九、三轴阻尼力矩核心考点</h1>
+<h2 id="9-1-三轴与阻尼对应关系【必背】-2">9.1 三轴与阻尼对应关系【必背】</h2>
+<ol>
+<li>纵向（俯仰） → 绕<strong>横轴</strong></li>
+<li>横向（滚转） → 绕<strong>纵轴</strong></li>
+<li>方向（偏航） → 绕<strong>立轴</strong></li>
+</ol>
+<h2 id="9-2-阻尼力矩核心来源【满分考点】-2">9.2 阻尼力矩核心来源【满分考点】</h2>
+<ul>
+<li><strong>纵向阻尼（俯仰）</strong>：核心产生部件 → <strong>水平尾翼</strong></li>
+<li><strong>横向阻尼（滚转）</strong>：核心产生部件 → <strong>机翼</strong></li>
+<li><strong>方向阻尼（偏航）</strong>：核心产生部件 → <strong>垂直尾翼</strong></li>
+</ul>
+<h2 id="9-3-核心作用原理-2">9.3 核心作用原理</h2>
+<p>阻尼力矩是被动空气阻力力矩，核心作用是<strong>抑制飞机姿态摆动</strong>，而非直接改平姿态：</p>
+<ol>
+<li>纵向阻尼：抑制飞机抬头/低头的俯仰摆动</li>
+<li>横向阻尼：抑制机翼左右倾斜的滚转摆动</li>
+<li>方向阻尼：抑制机头左右摇摆的偏航摆动</li>
+</ol>
+<h2 id="9-4-记忆口诀-2">9.4 记忆口诀</h2>
+<p>纵向俯仰看平尾，横向滚转看机翼，方向偏航看垂尾。</p>
+<hr>
+<h1>十、迎角与压力中心、气动焦点</h1>
+<h2 id="10-1-核心结论【考试必背】-2">10.1 核心结论【考试必背】</h2>
+<ol>
+<li>迎角增大 → <strong>压力中心前移</strong></li>
+<li>迎角减小 → <strong>压力中心后移</strong></li>
+</ol>
+<h2 id="10-2-原理通俗理解-2">10.2 原理通俗理解</h2>
+<ul>
+<li>机翼升力主要来自<strong>上表面前段的负压区</strong></li>
+<li>大迎角：机翼前段气流加速强、吸力大 → 气动力合力作用点前移</li>
+<li>小迎角：机翼前段气流平缓，后半段气动力占比提升 → 气动力合力作用点后移</li>
+</ul>
+<h2 id="10-3-易混概念核心区分【高频易错】-2">10.3 易混概念核心区分【高频易错】</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">名称</th>
+<th style="text-align:left">核心特性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>压力中心（CP）</strong></td>
+<td style="text-align:left">位置随<strong>迎角变化</strong>前后移动，是气动力合力的作用点</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>气动焦点（AC）</strong></td>
+<td style="text-align:left">位置<strong>固定不变</strong>，不随迎角改变，常规翼型约在25%弦长处</td>
+</tr>
+</tbody>
+</table>
+<h2 id="10-4-记忆口诀-2">10.4 记忆口诀</h2>
+<p>大迎角，压心前；小迎角，压心后。</p>
+<hr>
+<h1>十一、机翼关键角度与侧滑操纵考点</h1>
+<h2 id="11-1-机翼关键角度定义【基础考点】-2">11.1 机翼关键角度定义【基础考点】</h2>
+<ol>
+<li><strong>后掠角</strong>：机翼1/4弦线与机身中心线垂线的夹角，无特殊说明均以此为准</li>
+<li><strong>安装角</strong>：机翼弦线与机身轴线的夹角，为固定角度，不随飞行姿态改变</li>
+<li><strong>上反角</strong>：机翼向上翘起的角度，用于增强横向稳定性</li>
+<li><strong>迎角</strong>：机翼弦线与相对气流的夹角，为动态角度，随飞行姿态实时改变</li>
+</ol>
+<blockquote>
+<p>易错点：</p>
+<ol>
+<li>安装角是<strong>机翼与机身的固定夹角</strong>，迎角是<strong>机翼与气流的动态夹角</strong>，二者完全不同，不可混淆</li>
+<li>后掠角默认指“1/4弦线后掠角”，不是前缘/后缘后掠角</li>
+</ol>
+</blockquote>
+<h2 id="11-2-横向静稳定性核心来源【修正原知识点偏差】-2">11.2 横向静稳定性核心来源【修正原知识点偏差】</h2>
+<ol>
+<li><strong>上反角</strong>：飞机侧滑时，迎风侧机翼有效迎角增大，升力提升，背风侧迎角减小，升力降低，产生<strong>滚转恢复力矩</strong>，使飞机自动改平，是横向静稳定性的核心来源</li>
+<li><strong>后掠角</strong>：飞机侧滑时，迎风侧机翼垂直于前缘的有效速度更大，升力提升，背风侧有效速度更小，升力降低，产生<strong>滚转恢复力矩</strong>，提供横向静稳定性</li>
+</ol>
+<h2 id="11-3-侧滑相关核心考点【必考·修正原知识点偏差】-2">11.3 侧滑相关核心考点【必考·修正原知识点偏差】</h2>
+<ol>
+<li><strong>侧滑角定义</strong>：空速向量与飞机对称面的夹角，空速在对称面左侧为左侧滑，在右侧为右侧滑</li>
+<li><strong>左侧滑特性</strong>：静稳定飞机出现左侧滑时，垂尾左侧迎角增大，产生向右的气动力，使机头<strong>自动向左转（回正）</strong>，对准来流方向</li>
+<li><strong>单纯副翼转弯侧滑</strong>：只压左副翼左转弯时，因逆偏航效应（右副翼下偏阻力增大），机头向右偏转，空速落在飞机对称面左侧，产生<strong>左侧滑</strong></li>
+</ol>
+<blockquote>
+<p>易错点：侧滑不是“飞机侧着飞”，核心是<strong>空速方向与飞机对称面不重合</strong>，分为左侧滑、右侧滑，与转弯方向不一定一致。</p>
+</blockquote>
+<h2 id="11-4-飞行操纵实操考点-2">11.4 飞行操纵实操考点</h2>
+<ol>
+<li><strong>侧风着陆侧滑修正</strong>：向侧风方向压杆带坡度，同时反舵抵制转弯，实现侧滑修正</li>
+<li><strong>坡度转弯操纵</strong>：坡度转弯时配合方向舵→实现<strong>协调转弯</strong>，可减小转弯半径、消除侧滑</li>
+<li><strong>侧风着陆升阻比保护</strong>：不降低升阻比的方法→用<strong>改变航向法</strong></li>
+</ol>
+<h2 id="11-5-三轴稳定性核心规律【核心必考】-2">11.5 三轴稳定性核心规律【核心必考】</h2>
+<h3 id="11-5-1-三轴与稳定性对应关系【必背】-2">11.5.1 三轴与稳定性对应关系【必背】</h3>
+<ol>
+<li>绕<strong>纵轴</strong>转动→对应<strong>横向稳定性</strong></li>
+<li>绕<strong>横轴</strong>转动→对应<strong>纵向稳定性</strong></li>
+<li>绕<strong>立轴</strong>转动→对应<strong>航向（方向）稳定性</strong></li>
+</ol>
+<h3 id="11-5-2-稳定性核心定义-2">11.5.2 稳定性核心定义</h3>
+<p>飞机受扰动偏离原飞行姿态，扰动消失后，飞机<strong>自动恢复原飞行姿态</strong>的能力，而非单纯回到零转角。</p>
+<h3 id="11-5-3-稳定性关联关系-2">11.5.3 稳定性关联关系</h3>
+<ol>
+<li>横向稳定性与航向稳定性：<strong>互相耦合</strong>，必须匹配适当，否则会出现荷兰滚或螺旋不稳定</li>
+<li>纵向稳定性与航向稳定性：<strong>互相独立</strong>，互不影响</li>
+</ol>
+<h3 id="11-5-4-稳定性核心影响因素-2">11.5.4 稳定性核心影响因素</h3>
+<ol>
+<li>增加水平尾翼面积→增大纵向静稳定性</li>
+<li>增加垂直尾翼面积→增大方向静稳定性</li>
+<li>方向稳定性最关键部件：<strong>垂直尾翼</strong></li>
+<li>重心位置<strong>仅影响纵向稳定性</strong></li>
+<li>常规布局气动焦点始终在重心后方；焦点后移→纵向静稳定性增强</li>
+</ol>
+<blockquote>
+<p>易错点：</p>
+<ol>
+<li>重心不影响横向、航向稳定性，仅改变纵向稳定性</li>
+<li>垂直尾翼仅影响方向稳定性，水平尾翼仅影响纵向稳定性</li>
+</ol>
+</blockquote>
+<h2 id="11-6-必背三大口诀-2">11.6 必背三大口诀</h2>
+<ol>
+<li>三轴对应：横轴—纵向俯仰；纵轴—横向滚转；立轴—航向偏航</li>
+<li>阻尼力矩：纵向平尾、横向机翼、方向垂尾</li>
+<li>尾翼作用：平尾管纵向，垂尾管航向，机翼管横向</li>
+</ol>
+<hr>
+<h1>十二、荷兰滚与螺旋不稳定</h1>
+<ol>
+<li>方向安定性过强、横侧稳定性过弱 → <strong>螺旋不稳定</strong></li>
+<li>横侧安定性过强、方向稳定性过弱 → <strong>荷兰滚（飘摆）</strong></li>
+</ol>
+<p><strong>核心原理</strong></p>
+<ul>
+<li>荷兰滚（飘摆）：横向稳、航向弱；飞机出现左右滚转+机头左右偏航的耦合振荡，来回晃动</li>
+<li>螺旋不稳定：航向稳、横向弱；飞机受扰动倾斜后，滚转与偏航耦合加剧，持续下坠形成螺旋俯冲</li>
+</ul>
+<p><strong>补充实操考点</strong></p>
+<ul>
+<li>荷兰滚改出：用方向舵协调偏航，抑制振荡</li>
+<li>螺旋不稳定改出：先推杆减小迎角，再改平坡度，最后修正航向</li>
+<li>设计原则：常规飞机设计会适当牺牲横向稳定性，优先保证方向稳定性，避免荷兰滚（螺旋不稳定发展缓慢，飞行员有充足时间修正）</li>
+</ul>
+<hr>
+<h1>十三、地面效应</h1>
+<h2 id="13-1-核心定义-2">13.1 核心定义</h2>
+<p>当固定翼无人机距离地面/水面高度 <strong>小于等于机翼翼展</strong> 时，地面阻挡气流向下扩散，改变机翼气动特性的现象；离地越近，地面效应越明显，高度超过翼展2倍时，地面效应基本消失。</p>
+<h2 id="13-2-产生原理-2">13.2 产生原理</h2>
+<ol>
+<li>正常飞行：机翼下气流向下散开，下洗气流大，诱导阻力高</li>
+<li>贴近地面：地面形成“挡板”，阻挡气流向下扩散，限制翼尖涡流发展</li>
+<li>直接效果：机翼下表面压力升高，整体升力增大，诱导阻力显著减小</li>
+</ol>
+<h2 id="13-3-地面效应核心变化与实操影响【CAAC必考】-2">13.3 地面效应核心变化与实操影响【CAAC必考】</h2>
+<ol>
+<li>同等迎角下，升力系数显著增大，临界迎角减小，飞机易提前失速</li>
+<li>诱导阻力大幅减小，相同推力下飞行速度增大</li>
+<li>着陆阶段，贴近地面时升力突增，飞机出现**“飘飞”**现象，导致着陆滑跑距离增长</li>
+<li>起飞阶段，地面效应可降低离地速度，缩短起飞滑跑距离</li>
+</ol>
+<hr>
+<h1>十四、翼型三个关键位置</h1>
+<p>翼型从前到后依次：前缘 → 翼弦 → 后缘</p>
+<p>三个核心关键点：</p>
+<ul>
+<li><strong>CG 重心</strong>：位置固定不变，常规布局在最前方</li>
+<li><strong>AC 气动焦点</strong>：位置固定不变，常规翼型约在25%弦长处</li>
+<li><strong>CP 压力中心</strong>：位置随迎角变化前后移动，常规状态在气动焦点后方</li>
+</ul>
+<p><strong>核心规律</strong></p>
+<ul>
+<li>迎角增大 → 压力中心前移</li>
+<li>迎角减小 → 压力中心后移</li>
+</ul>
+<hr>
+<h1>十五、诱导阻力考点全解析</h1>
+<h2 id="15-1-核心定义-2">15.1 核心定义</h2>
+<p>诱导阻力是<strong>机翼产生升力必须付出的气动代价</strong>，是产生升力时附带的额外阻力，零升状态下诱导阻力为0。</p>
+<h2 id="15-2-产生原理-2">15.2 产生原理</h2>
+<ol>
+<li>机翼正常产生升力时，上表面压力低、下表面压力高</li>
+<li>下表面高压气流从翼尖绕到上表面低压区，形成<strong>翼尖涡流</strong></li>
+<li>翼尖涡流拉扯后方气流形成<strong>下洗气流</strong>，使升力方向向后倾斜，产生向后的阻力分量，即为诱导阻力</li>
+</ol>
+<p><strong>记忆口诀</strong>：翼尖涡流 → 下洗气流 → 诱导阻力。</p>
+<h2 id="15-3-核心影响因素-2">15.3 核心影响因素</h2>
+<ol>
+<li>飞行速度：速度越慢，诱导阻力越大；速度越快，诱导阻力越小</li>
+<li>机翼升力：升力越大，诱导阻力越大</li>
+<li>展弦比：机翼展弦比越大（越细长），诱导阻力越小；展弦比越小（越短粗），诱导阻力越大</li>
+</ol>
+<h2 id="15-4-核心应用场景-2">15.4 核心应用场景</h2>
+<ul>
+<li>起降低速阶段：诱导阻力占总阻力的主导地位</li>
+<li>高速巡航阶段：寄生阻力占总阻力的主导地位</li>
+<li>地面效应阶段：贴近地面时，翼尖涡流被抑制，诱导阻力明显减小</li>
+</ul>
+<h2 id="15-5-核心减阻方法-2">15.5 核心减阻方法</h2>
+<ol>
+<li>采用大展弦比机翼</li>
+<li>机翼翼尖加装翼梢小翼/翼尖帆</li>
+<li>优化机翼梯形比，采用椭圆翼型平面形状</li>
+</ol>
+<blockquote>
+<p>易错点：诱导阻力不是摩擦阻力，是<strong>升力的副产品</strong>，与寄生阻力完全不同，零升状态下诱导阻力为0。</p>
+</blockquote>
+<hr>
+<h1>十六、下滑有利速度考点版</h1>
+<h2 id="16-1-核心定义-2">16.1 核心定义</h2>
+<p>飞机关闭油门无动力下滑时，<strong>下滑距离最远、下滑角最小</strong>的飞行速度，称为下滑有利速度，也叫<strong>最大升阻比速度</strong>。</p>
+<h2 id="16-2-核心原理-2">16.2 核心原理</h2>
+<p>无动力下滑时，飞机的阻力分为两类：</p>
+<ul>
+<li>低速范围：诱导阻力占主导</li>
+<li>高速范围：寄生阻力占主导<br>
+当两类阻力总和最小时，升阻比达到最大值，此时对应的速度即为下滑有利速度。</li>
+</ul>
+<p>核心公式：无动力下滑时，下滑角$\theta$满足</p>
+<p>$$<br>
+\tan\theta = \frac{1}{K}<br>
+$$</p>
+<p>升阻比$K$越大，下滑角越小，滑翔距离越远。</p>
+<h2 id="16-3-核心考点-2">16.3 核心考点</h2>
+<ol>
+<li>核心用途：发动机失效迫降时，保持此速度可获得最远滑翔距离，最大化迫降场地选择范围</li>
+<li>速度范围：比失速速度大，比正常巡航速度小</li>
+<li>核心别称：最大升阻比速度、最优滑翔速度</li>
+<li>补充特性：有利速度仅由飞机气动外形决定，与重量、高度无关；重量增大时，有利真空速同步增大，但升阻比不变</li>
+</ol>
+<p><strong>记忆口诀</strong>：停车下滑想飞远，保持有利速度最稳妥。</p>
+<blockquote>
+<p>易错点：下滑有利速度不是最慢速度，也不是最快速度，是<strong>总阻力最小、升阻比最大、滑翔距离最远</strong>的中间速度。</p>
+</blockquote>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://example.com">柒柒昱</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://example.com/posts/dd8b8ec9/">http://example.com/posts/dd8b8ec9/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="http://example.com" target="_blank">柒柒昱的博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA/">无人机</a><a class="post-meta__tags" href="/tags/CAAC/">CAAC</a><a class="post-meta__tags" href="/tags/%E9%A3%9E%E8%A1%8C%E5%8E%9F%E7%90%86/">飞行原理</a></div><div class="post-share"><div class="social-share" data-image="/img/butterfly-icon.png" data-sites="wechat,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"></nav></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">一、大气基础知识点</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-%E5%A4%A7%E6%B0%94%E6%A0%B8%E5%BF%83%E7%89%B9%E6%80%A7"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 大气核心特性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-1-%E7%A9%BA%E6%B0%94%E5%AF%86%E5%BA%A6%E8%A7%84%E5%BE%8B"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.1.1 空气密度规律</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-2-%E5%A4%A7%E6%B0%94%E5%B1%82%E5%9E%82%E7%9B%B4%E5%88%86%E5%B1%82%EF%BC%88%E4%BB%8E%E4%BD%8E%E5%88%B0%E9%AB%98%EF%BC%89"><span class="toc-number">1.1.2.</span> <span class="toc-text">1.1.2 大气层垂直分层（从低到高）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-3-%E6%B0%94%E4%BD%93%E9%BB%8F%E6%80%A7%E7%89%B9%E6%80%A7"><span class="toc-number">1.1.3.</span> <span class="toc-text">1.1.3 气体黏性特性</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-%E7%A9%BA%E6%B0%94%E5%AF%86%E5%BA%A6%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 空气密度计算公式</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">二、流体力学基础定理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-%E8%BF%9E%E7%BB%AD%E6%80%A7%E5%AE%9A%E7%90%86"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 连续性定理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-%E4%BC%AF%E5%8A%AA%E5%88%A9%E5%AE%9A%E7%90%86"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 伯努利定理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-%E4%B8%A4%E5%A4%A7%E5%AE%9A%E7%90%86%E8%81%94%E5%8A%A8%E9%80%BB%E8%BE%91"><span class="toc-number">2.3.</span> <span class="toc-text">2.3 两大定理联动逻辑</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">3.</span> <span class="toc-text">三、固定翼无人机机翼核心参数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-%E6%9C%BA%E7%BF%BC%E5%B9%B3%E9%9D%A2%E5%BD%A2%E7%8A%B6%E6%A0%B8%E5%BF%83%E5%8F%82%E6%95%B0"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 机翼平面形状核心参数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-1-%E6%9C%BA%E7%BF%BC%E9%9D%A2%E7%A7%AF%EF%BC%88-S-%EF%BC%89"><span class="toc-number">3.1.1.</span> <span class="toc-text">3.1.1 机翼面积（$S$）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-2-%E7%BF%BC%E5%B1%95%EF%BC%88-b-%EF%BC%89"><span class="toc-number">3.1.2.</span> <span class="toc-text">3.1.2 翼展（$b$）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-3-%E5%B9%B3%E5%9D%87%E5%87%A0%E4%BD%95%E5%BC%A6%E9%95%BF%E4%B8%8E%E5%B9%B3%E5%9D%87%E6%B0%94%E5%8A%A8%E5%8A%9B%E5%BC%A6%E9%95%BF"><span class="toc-number">3.1.3.</span> <span class="toc-text">3.1.3 平均几何弦长与平均气动力弦长</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B9%B3%E5%9D%87%E5%87%A0%E4%BD%95%E5%BC%A6%E9%95%BF"><span class="toc-number">3.1.3.1.</span> <span class="toc-text">平均几何弦长</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B9%B3%E5%9D%87%E6%B0%94%E5%8A%A8%E5%8A%9B%E5%BC%A6%E9%95%BF%EF%BC%88MAC%EF%BC%89%E3%80%90CAAC%E5%BF%85%E8%80%83%E3%80%91"><span class="toc-number">3.1.3.2.</span> <span class="toc-text">平均气动力弦长（MAC）【CAAC必考】</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-4-%E5%B1%95%E5%BC%A6%E6%AF%94%EF%BC%88-A-%EF%BC%89"><span class="toc-number">3.1.4.</span> <span class="toc-text">3.1.4 展弦比（$A$）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-5-%E6%A2%AF%E5%BD%A2%E6%AF%94%EF%BC%88%E5%B0%96%E5%89%8A%E6%AF%94%EF%BC%89"><span class="toc-number">3.1.5.</span> <span class="toc-text">3.1.5 梯形比（尖削比）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-6-%E5%90%8E%E6%8E%A0%E8%A7%92"><span class="toc-number">3.1.6.</span> <span class="toc-text">3.1.6 后掠角</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-7-%E4%B8%8A%E5%8F%8D%E8%A7%92%E4%B8%8E%E4%B8%8B%E5%8F%8D%E8%A7%92"><span class="toc-number">3.1.7.</span> <span class="toc-text">3.1.7 上反角与下反角</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-%E6%9C%BA%E7%BF%BC%E6%A0%B8%E5%BF%83%E6%B0%94%E5%8A%A8%E5%85%AC%E5%BC%8F"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 机翼核心气动公式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-1-%E5%8D%87%E5%8A%9B%E5%85%AC%E5%BC%8F"><span class="toc-number">3.2.1.</span> <span class="toc-text">3.2.1 升力公式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-2-%E9%98%BB%E5%8A%9B%E5%85%AC%E5%BC%8F"><span class="toc-number">3.2.2.</span> <span class="toc-text">3.2.2 阻力公式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-3-%E5%8D%87%E5%8A%9B%E7%B3%BB%E6%95%B0%E5%85%AC%E5%BC%8F"><span class="toc-number">3.2.3.</span> <span class="toc-text">3.2.3 升力系数公式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-4-%E5%8D%87%E5%8A%9B%E7%B3%BB%E6%95%B0%E6%9B%B2%E7%BA%BF"><span class="toc-number">3.2.4.</span> <span class="toc-text">3.2.4 升力系数曲线</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">3.2.4.1.</span> <span class="toc-text">一、基本概念</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%9D%90%E6%A0%87%E8%BD%B4%E5%AE%9A%E4%B9%89"><span class="toc-number">3.2.4.2.</span> <span class="toc-text">二、坐标轴定义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E6%9B%B2%E7%BA%BF%E5%90%84%E9%98%B6%E6%AE%B5%E8%A7%A3%E6%9E%90"><span class="toc-number">3.2.4.3.</span> <span class="toc-text">三、曲线各阶段解析</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%85%B3%E9%94%AE%E6%9C%AF%E8%AF%AD%E6%80%BB%E7%BB%93"><span class="toc-number">3.2.4.4.</span> <span class="toc-text">四、关键术语总结</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">4.</span> <span class="toc-text">四、机翼操纵装置与三轴运动原理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-%E6%9C%BA%E7%BF%BC%E6%A0%B8%E5%BF%83%E6%93%8D%E7%BA%B5%E8%A3%85%E7%BD%AE"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 机翼核心操纵装置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-1-%E5%89%AF%E7%BF%BC"><span class="toc-number">4.1.1.</span> <span class="toc-text">4.1.1 副翼</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-2-%E8%A5%9F%E7%BF%BC"><span class="toc-number">4.1.2.</span> <span class="toc-text">4.1.2 襟翼</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-3-%E5%89%8D%E7%BC%98%E7%BC%9D%E7%BF%BC"><span class="toc-number">4.1.3.</span> <span class="toc-text">4.1.3 前缘缝翼</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-4-%E6%89%B0%E6%B5%81%E6%9D%BF%EF%BC%88%E5%87%8F%E9%80%9F%E6%9D%BF-%E5%87%8F%E5%8D%87%E8%A3%85%E7%BD%AE%EF%BC%89"><span class="toc-number">4.1.4.</span> <span class="toc-text">4.1.4 扰流板（减速板&#x2F;减升装置）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-%E9%A3%9E%E6%9C%BA%E4%B8%89%E8%BD%B4%E4%B8%8E%E5%AF%B9%E5%BA%94%E8%BF%90%E5%8A%A8%E3%80%90CAAC%E5%BF%85%E8%83%8C%E3%80%91"><span class="toc-number">4.2.</span> <span class="toc-text">4.2 飞机三轴与对应运动【CAAC必背】</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%A5%E5%85%85%E8%88%B5%E9%9D%A2%E6%93%8D%E7%BA%B5%E5%8E%9F%E7%90%86"><span class="toc-number">4.2.1.</span> <span class="toc-text">补充舵面操纵原理</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">5.</span> <span class="toc-text">五、固定翼无人机的飞行阻力</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#5-1-%E9%99%84%E9%9D%A2%E5%B1%82%E5%9F%BA%E7%A1%80"><span class="toc-number">5.1.</span> <span class="toc-text">5.1 附面层基础</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-2-%E5%9B%9B%E5%A4%A7%E5%9F%BA%E7%A1%80%E9%98%BB%E5%8A%9B%E7%B1%BB%E5%9E%8B"><span class="toc-number">5.2.</span> <span class="toc-text">5.2 四大基础阻力类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-3-%E9%98%BB%E5%8A%9B%E5%A4%A7%E7%B1%BB%E5%88%92%E5%88%86%E4%B8%8E%E9%80%9F%E5%BA%A6%E5%8F%98%E5%8C%96%E8%A7%84%E5%BE%8B"><span class="toc-number">5.3.</span> <span class="toc-text">5.3 阻力大类划分与速度变化规律</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-4-%E9%92%88%E5%AF%B9%E6%80%A7%E5%87%8F%E9%98%BB%E6%8E%AA%E6%96%BD%E3%80%90%E8%83%8C%E8%AF%B5%E3%80%91"><span class="toc-number">5.4.</span> <span class="toc-text">5.4 针对性减阻措施【背诵】</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">6.</span> <span class="toc-text">六、固定翼无人机低速空气动力性能</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#6-1-%E5%8D%87%E5%8A%9B%E6%A0%B8%E5%BF%83%E5%BD%B1%E5%93%8D%E5%9B%A0%E7%B4%A0"><span class="toc-number">6.1.</span> <span class="toc-text">6.1 升力核心影响因素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-2-%E8%BF%8E%E8%A7%92%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5%E3%80%90%E5%BF%85%E8%80%83%E3%80%91"><span class="toc-number">6.2.</span> <span class="toc-text">6.2 迎角核心概念【必考】</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-3-%E5%A4%B1%E9%80%9F%E9%80%9F%E5%BA%A6%E3%80%90CAAC%E5%BF%85%E8%80%83%E8%A1%A5%E5%85%85%E3%80%91"><span class="toc-number">6.3.</span> <span class="toc-text">6.3 失速速度【CAAC必考补充】</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-4-%E9%98%BB%E5%8A%9B%E7%B3%BB%E6%95%B0%E6%9B%B2%E7%BA%BF%E8%A7%84%E5%BE%8B"><span class="toc-number">6.4.</span> <span class="toc-text">6.4 阻力系数曲线规律</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-5-%E5%8D%87%E9%98%BB%E6%AF%94%E3%80%90%E6%A0%B8%E5%BF%83%E8%80%83%E7%82%B9%E3%80%91"><span class="toc-number">6.5.</span> <span class="toc-text">6.5 升阻比【核心考点】</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B0%94%E5%8A%A8%E6%9E%81%E6%9B%B2%E7%BA%BF%E3%80%90CAAC%E9%9A%BE%E7%82%B9%E8%80%83%E7%82%B9%E3%80%91"><span class="toc-number">6.5.1.</span> <span class="toc-text">气动极曲线【CAAC难点考点】</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">7.</span> <span class="toc-text">七、固定翼无人机重心与操纵力矩</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#7-1-%E9%87%8D%E5%BF%83%E6%A0%B8%E5%BF%83%E5%AE%9A%E4%B9%89"><span class="toc-number">7.1.</span> <span class="toc-text">7.1 重心核心定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-2-%E4%B8%89%E5%A4%A7%E6%93%8D%E7%BA%B5%E5%8A%9B%E7%9F%A9%E4%B8%8E%E5%AF%B9%E5%BA%94%E8%88%B5%E9%9D%A2"><span class="toc-number">7.2.</span> <span class="toc-text">7.2 三大操纵力矩与对应舵面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-3-%E9%87%8D%E5%BF%83%E5%89%8D%E5%90%8E%E9%99%90%E3%80%90%E8%A1%A5%E5%85%85%E5%BF%85%E8%80%83%E8%80%83%E7%82%B9%E3%80%91"><span class="toc-number">7.3.</span> <span class="toc-text">7.3 重心前后限【补充必考考点】</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">8.</span> <span class="toc-text">八、固定翼无人机的平衡与稳定性</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#8-1-%E9%A3%9E%E6%9C%BA%E5%B9%B3%E8%A1%A1%E6%A0%B8%E5%BF%83%E6%9D%A1%E4%BB%B6"><span class="toc-number">8.1.</span> <span class="toc-text">8.1 飞机平衡核心条件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-2-%E4%BF%AF%E4%BB%B0%E5%B9%B3%E8%A1%A1%EF%BC%88%E7%BA%B5%E5%90%91%E5%B9%B3%E8%A1%A1%EF%BC%89%E4%B8%89%E7%A7%8D%E7%8A%B6%E6%80%81"><span class="toc-number">8.2.</span> <span class="toc-text">8.2 俯仰平衡（纵向平衡）三种状态</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-3-%E6%96%B9%E5%90%91%E5%B9%B3%E8%A1%A1%EF%BC%88%E8%88%AA%E5%90%91%E5%B9%B3%E8%A1%A1-%E7%AB%8B%E8%BD%B4%EF%BC%89"><span class="toc-number">8.3.</span> <span class="toc-text">8.3 方向平衡（航向平衡&#x2F;立轴）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-4-%E6%A8%AA%E5%90%91%E5%B9%B3%E8%A1%A1%EF%BC%88%E6%A8%AA%E6%BB%9A%E5%B9%B3%E8%A1%A1-%E7%BA%B5%E8%BD%B4%EF%BC%89"><span class="toc-number">8.4.</span> <span class="toc-text">8.4 横向平衡（横滚平衡&#x2F;纵轴）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-5-%E9%9D%99%E7%A8%B3%E5%AE%9A%E6%80%A7%E4%B8%8E%E5%8A%A8%E7%A8%B3%E5%AE%9A%E6%80%A7%E3%80%90%E8%A1%A5%E5%85%85%E8%80%83%E7%82%B9%E3%80%91"><span class="toc-number">8.5.</span> <span class="toc-text">8.5 静稳定性与动稳定性【补充考点】</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-6-%E7%BA%B5%E5%90%91%E7%A8%B3%E5%AE%9A%E6%80%A7%E6%A0%B8%E5%BF%83%E8%A7%84%E5%BE%8B%E3%80%90%E5%BF%85%E8%80%83%E5%8F%A3%E8%AF%80%E3%80%91"><span class="toc-number">8.6.</span> <span class="toc-text">8.6 纵向稳定性核心规律【必考口诀】</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">9.</span> <span class="toc-text">九、三轴阻尼力矩核心考点</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#9-1-%E4%B8%89%E8%BD%B4%E4%B8%8E%E9%98%BB%E5%B0%BC%E5%AF%B9%E5%BA%94%E5%85%B3%E7%B3%BB%E3%80%90%E5%BF%85%E8%83%8C%E3%80%91"><span class="toc-number">9.1.</span> <span class="toc-text">9.1 三轴与阻尼对应关系【必背】</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-2-%E9%98%BB%E5%B0%BC%E5%8A%9B%E7%9F%A9%E6%A0%B8%E5%BF%83%E6%9D%A5%E6%BA%90%E3%80%90%E6%BB%A1%E5%88%86%E8%80%83%E7%82%B9%E3%80%91"><span class="toc-number">9.2.</span> <span class="toc-text">9.2 阻尼力矩核心来源【满分考点】</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-3-%E6%A0%B8%E5%BF%83%E4%BD%9C%E7%94%A8%E5%8E%9F%E7%90%86"><span class="toc-number">9.3.</span> <span class="toc-text">9.3 核心作用原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-4-%E8%AE%B0%E5%BF%86%E5%8F%A3%E8%AF%80"><span class="toc-number">9.4.</span> <span class="toc-text">9.4 记忆口诀</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">10.</span> <span class="toc-text">十、迎角与压力中心、气动焦点</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#10-1-%E6%A0%B8%E5%BF%83%E7%BB%93%E8%AE%BA%E3%80%90%E8%80%83%E8%AF%95%E5%BF%85%E8%83%8C%E3%80%91"><span class="toc-number">10.1.</span> <span class="toc-text">10.1 核心结论【考试必背】</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-2-%E5%8E%9F%E7%90%86%E9%80%9A%E4%BF%97%E7%90%86%E8%A7%A3"><span class="toc-number">10.2.</span> <span class="toc-text">10.2 原理通俗理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-3-%E6%98%93%E6%B7%B7%E6%A6%82%E5%BF%B5%E6%A0%B8%E5%BF%83%E5%8C%BA%E5%88%86%E3%80%90%E9%AB%98%E9%A2%91%E6%98%93%E9%94%99%E3%80%91"><span class="toc-number">10.3.</span> <span class="toc-text">10.3 易混概念核心区分【高频易错】</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-4-%E8%AE%B0%E5%BF%86%E5%8F%A3%E8%AF%80"><span class="toc-number">10.4.</span> <span class="toc-text">10.4 记忆口诀</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">11.</span> <span class="toc-text">十一、机翼关键角度与侧滑操纵考点</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#11-1-%E6%9C%BA%E7%BF%BC%E5%85%B3%E9%94%AE%E8%A7%92%E5%BA%A6%E5%AE%9A%E4%B9%89%E3%80%90%E5%9F%BA%E7%A1%80%E8%80%83%E7%82%B9%E3%80%91"><span class="toc-number">11.1.</span> <span class="toc-text">11.1 机翼关键角度定义【基础考点】</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-2-%E6%A8%AA%E5%90%91%E9%9D%99%E7%A8%B3%E5%AE%9A%E6%80%A7%E6%A0%B8%E5%BF%83%E6%9D%A5%E6%BA%90%E3%80%90%E4%BF%AE%E6%AD%A3%E5%8E%9F%E7%9F%A5%E8%AF%86%E7%82%B9%E5%81%8F%E5%B7%AE%E3%80%91"><span class="toc-number">11.2.</span> <span class="toc-text">11.2 横向静稳定性核心来源【修正原知识点偏差】</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-3-%E4%BE%A7%E6%BB%91%E7%9B%B8%E5%85%B3%E6%A0%B8%E5%BF%83%E8%80%83%E7%82%B9%E3%80%90%E5%BF%85%E8%80%83%C2%B7%E4%BF%AE%E6%AD%A3%E5%8E%9F%E7%9F%A5%E8%AF%86%E7%82%B9%E5%81%8F%E5%B7%AE%E3%80%91"><span class="toc-number">11.3.</span> <span class="toc-text">11.3 侧滑相关核心考点【必考·修正原知识点偏差】</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-4-%E9%A3%9E%E8%A1%8C%E6%93%8D%E7%BA%B5%E5%AE%9E%E6%93%8D%E8%80%83%E7%82%B9"><span class="toc-number">11.4.</span> <span class="toc-text">11.4 飞行操纵实操考点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-5-%E4%B8%89%E8%BD%B4%E7%A8%B3%E5%AE%9A%E6%80%A7%E6%A0%B8%E5%BF%83%E8%A7%84%E5%BE%8B%E3%80%90%E6%A0%B8%E5%BF%83%E5%BF%85%E8%80%83%E3%80%91"><span class="toc-number">11.5.</span> <span class="toc-text">11.5 三轴稳定性核心规律【核心必考】</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#11-5-1-%E4%B8%89%E8%BD%B4%E4%B8%8E%E7%A8%B3%E5%AE%9A%E6%80%A7%E5%AF%B9%E5%BA%94%E5%85%B3%E7%B3%BB%E3%80%90%E5%BF%85%E8%83%8C%E3%80%91"><span class="toc-number">11.5.1.</span> <span class="toc-text">11.5.1 三轴与稳定性对应关系【必背】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-5-2-%E7%A8%B3%E5%AE%9A%E6%80%A7%E6%A0%B8%E5%BF%83%E5%AE%9A%E4%B9%89"><span class="toc-number">11.5.2.</span> <span class="toc-text">11.5.2 稳定性核心定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-5-3-%E7%A8%B3%E5%AE%9A%E6%80%A7%E5%85%B3%E8%81%94%E5%85%B3%E7%B3%BB"><span class="toc-number">11.5.3.</span> <span class="toc-text">11.5.3 稳定性关联关系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-5-4-%E7%A8%B3%E5%AE%9A%E6%80%A7%E6%A0%B8%E5%BF%83%E5%BD%B1%E5%93%8D%E5%9B%A0%E7%B4%A0"><span class="toc-number">11.5.4.</span> <span class="toc-text">11.5.4 稳定性核心影响因素</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-6-%E5%BF%85%E8%83%8C%E4%B8%89%E5%A4%A7%E5%8F%A3%E8%AF%80"><span class="toc-number">11.6.</span> <span class="toc-text">11.6 必背三大口诀</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">12.</span> <span class="toc-text">十二、荷兰滚与螺旋不稳定</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">13.</span> <span class="toc-text">十三、地面效应</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#13-1-%E6%A0%B8%E5%BF%83%E5%AE%9A%E4%B9%89"><span class="toc-number">13.1.</span> <span class="toc-text">13.1 核心定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-2-%E4%BA%A7%E7%94%9F%E5%8E%9F%E7%90%86"><span class="toc-number">13.2.</span> <span class="toc-text">13.2 产生原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-3-%E5%9C%B0%E9%9D%A2%E6%95%88%E5%BA%94%E6%A0%B8%E5%BF%83%E5%8F%98%E5%8C%96%E4%B8%8E%E5%AE%9E%E6%93%8D%E5%BD%B1%E5%93%8D%E3%80%90CAAC%E5%BF%85%E8%80%83%E3%80%91"><span class="toc-number">13.3.</span> <span class="toc-text">13.3 地面效应核心变化与实操影响【CAAC必考】</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">14.</span> <span class="toc-text">十四、翼型三个关键位置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">15.</span> <span class="toc-text">十五、诱导阻力考点全解析</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#15-1-%E6%A0%B8%E5%BF%83%E5%AE%9A%E4%B9%89"><span class="toc-number">15.1.</span> <span class="toc-text">15.1 核心定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-2-%E4%BA%A7%E7%94%9F%E5%8E%9F%E7%90%86"><span class="toc-number">15.2.</span> <span class="toc-text">15.2 产生原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-3-%E6%A0%B8%E5%BF%83%E5%BD%B1%E5%93%8D%E5%9B%A0%E7%B4%A0"><span class="toc-number">15.3.</span> <span class="toc-text">15.3 核心影响因素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-4-%E6%A0%B8%E5%BF%83%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">15.4.</span> <span class="toc-text">15.4 核心应用场景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-5-%E6%A0%B8%E5%BF%83%E5%87%8F%E9%98%BB%E6%96%B9%E6%B3%95"><span class="toc-number">15.5.</span> <span class="toc-text">15.5 核心减阻方法</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">16.</span> <span class="toc-text">十六、下滑有利速度考点版</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#16-1-%E6%A0%B8%E5%BF%83%E5%AE%9A%E4%B9%89"><span class="toc-number">16.1.</span> <span class="toc-text">16.1 核心定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16-2-%E6%A0%B8%E5%BF%83%E5%8E%9F%E7%90%86"><span class="toc-number">16.2.</span> <span class="toc-text">16.2 核心原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16-3-%E6%A0%B8%E5%BF%83%E8%80%83%E7%82%B9"><span class="toc-number">16.3.</span> <span class="toc-text">16.3 核心考点</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">17.</span> <span class="toc-text">一、大气基础知识点</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-%E5%A4%A7%E6%B0%94%E6%A0%B8%E5%BF%83%E7%89%B9%E6%80%A7-2"><span class="toc-number">17.1.</span> <span class="toc-text">1.1 大气核心特性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-1-%E7%A9%BA%E6%B0%94%E5%AF%86%E5%BA%A6%E8%A7%84%E5%BE%8B-2"><span class="toc-number">17.1.1.</span> <span class="toc-text">1.1.1 空气密度规律</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-2-%E5%A4%A7%E6%B0%94%E5%B1%82%E5%9E%82%E7%9B%B4%E5%88%86%E5%B1%82%EF%BC%88%E4%BB%8E%E4%BD%8E%E5%88%B0%E9%AB%98%EF%BC%89-2"><span class="toc-number">17.1.2.</span> <span class="toc-text">1.1.2 大气层垂直分层（从低到高）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-3-%E6%B0%94%E4%BD%93%E9%BB%8F%E6%80%A7%E7%89%B9%E6%80%A7-2"><span class="toc-number">17.1.3.</span> <span class="toc-text">1.1.3 气体黏性特性</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-%E7%A9%BA%E6%B0%94%E5%AF%86%E5%BA%A6%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F-2"><span class="toc-number">17.2.</span> <span class="toc-text">1.2 空气密度计算公式</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">18.</span> <span class="toc-text">二、流体力学基础定理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-%E8%BF%9E%E7%BB%AD%E6%80%A7%E5%AE%9A%E7%90%86-2"><span class="toc-number">18.1.</span> <span class="toc-text">2.1 连续性定理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-%E4%BC%AF%E5%8A%AA%E5%88%A9%E5%AE%9A%E7%90%86-2"><span class="toc-number">18.2.</span> <span class="toc-text">2.2 伯努利定理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-%E4%B8%A4%E5%A4%A7%E5%AE%9A%E7%90%86%E8%81%94%E5%8A%A8%E9%80%BB%E8%BE%91-2"><span class="toc-number">18.3.</span> <span class="toc-text">2.3 两大定理联动逻辑</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">19.</span> <span class="toc-text">三、固定翼无人机机翼核心参数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-%E6%9C%BA%E7%BF%BC%E5%B9%B3%E9%9D%A2%E5%BD%A2%E7%8A%B6%E6%A0%B8%E5%BF%83%E5%8F%82%E6%95%B0-2"><span class="toc-number">19.1.</span> <span class="toc-text">3.1 机翼平面形状核心参数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-1-%E6%9C%BA%E7%BF%BC%E9%9D%A2%E7%A7%AF%EF%BC%88-S-%EF%BC%89-2"><span class="toc-number">19.1.1.</span> <span class="toc-text">3.1.1 机翼面积（$S$）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-2-%E7%BF%BC%E5%B1%95%EF%BC%88-b-%EF%BC%89-2"><span class="toc-number">19.1.2.</span> <span class="toc-text">3.1.2 翼展（$b$）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-3-%E5%B9%B3%E5%9D%87%E5%87%A0%E4%BD%95%E5%BC%A6%E9%95%BF%E4%B8%8E%E5%B9%B3%E5%9D%87%E6%B0%94%E5%8A%A8%E5%8A%9B%E5%BC%A6%E9%95%BF-2"><span class="toc-number">19.1.3.</span> <span class="toc-text">3.1.3 平均几何弦长与平均气动力弦长</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B9%B3%E5%9D%87%E5%87%A0%E4%BD%95%E5%BC%A6%E9%95%BF-2"><span class="toc-number">19.1.3.1.</span> <span class="toc-text">平均几何弦长</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B9%B3%E5%9D%87%E6%B0%94%E5%8A%A8%E5%8A%9B%E5%BC%A6%E9%95%BF%EF%BC%88MAC%EF%BC%89%E3%80%90CAAC%E5%BF%85%E8%80%83%E3%80%91-2"><span class="toc-number">19.1.3.2.</span> <span class="toc-text">平均气动力弦长（MAC）【CAAC必考】</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-4-%E5%B1%95%E5%BC%A6%E6%AF%94%EF%BC%88-A-%EF%BC%89-2"><span class="toc-number">19.1.4.</span> <span class="toc-text">3.1.4 展弦比（$A$）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-5-%E6%A2%AF%E5%BD%A2%E6%AF%94%EF%BC%88%E5%B0%96%E5%89%8A%E6%AF%94%EF%BC%89-2"><span class="toc-number">19.1.5.</span> <span class="toc-text">3.1.5 梯形比（尖削比）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-6-%E5%90%8E%E6%8E%A0%E8%A7%92-2"><span class="toc-number">19.1.6.</span> <span class="toc-text">3.1.6 后掠角</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-7-%E4%B8%8A%E5%8F%8D%E8%A7%92%E4%B8%8E%E4%B8%8B%E5%8F%8D%E8%A7%92-2"><span class="toc-number">19.1.7.</span> <span class="toc-text">3.1.7 上反角与下反角</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-%E6%9C%BA%E7%BF%BC%E6%A0%B8%E5%BF%83%E6%B0%94%E5%8A%A8%E5%85%AC%E5%BC%8F-2"><span class="toc-number">19.2.</span> <span class="toc-text">3.2 机翼核心气动公式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-1-%E5%8D%87%E5%8A%9B%E5%85%AC%E5%BC%8F-2"><span class="toc-number">19.2.1.</span> <span class="toc-text">3.2.1 升力公式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-2-%E9%98%BB%E5%8A%9B%E5%85%AC%E5%BC%8F-2"><span class="toc-number">19.2.2.</span> <span class="toc-text">3.2.2 阻力公式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-3-%E5%8D%87%E5%8A%9B%E7%B3%BB%E6%95%B0%E5%85%AC%E5%BC%8F-2"><span class="toc-number">19.2.3.</span> <span class="toc-text">3.2.3 升力系数公式</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">20.</span> <span class="toc-text">四、机翼操纵装置与三轴运动原理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-%E6%9C%BA%E7%BF%BC%E6%A0%B8%E5%BF%83%E6%93%8D%E7%BA%B5%E8%A3%85%E7%BD%AE-2"><span class="toc-number">20.1.</span> <span class="toc-text">4.1 机翼核心操纵装置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-1-%E5%89%AF%E7%BF%BC-2"><span class="toc-number">20.1.1.</span> <span class="toc-text">4.1.1 副翼</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-2-%E8%A5%9F%E7%BF%BC-2"><span class="toc-number">20.1.2.</span> <span class="toc-text">4.1.2 襟翼</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-3-%E5%89%8D%E7%BC%98%E7%BC%9D%E7%BF%BC-2"><span class="toc-number">20.1.3.</span> <span class="toc-text">4.1.3 前缘缝翼</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-4-%E6%89%B0%E6%B5%81%E6%9D%BF%EF%BC%88%E5%87%8F%E9%80%9F%E6%9D%BF-%E5%87%8F%E5%8D%87%E8%A3%85%E7%BD%AE%EF%BC%89-2"><span class="toc-number">20.1.4.</span> <span class="toc-text">4.1.4 扰流板（减速板&#x2F;减升装置）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-%E9%A3%9E%E6%9C%BA%E4%B8%89%E8%BD%B4%E4%B8%8E%E5%AF%B9%E5%BA%94%E8%BF%90%E5%8A%A8%E3%80%90CAAC%E5%BF%85%E8%83%8C%E3%80%91-2"><span class="toc-number">20.2.</span> <span class="toc-text">4.2 飞机三轴与对应运动【CAAC必背】</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%A5%E5%85%85%E8%88%B5%E9%9D%A2%E6%93%8D%E7%BA%B5%E5%8E%9F%E7%90%86-2"><span class="toc-number">20.2.1.</span> <span class="toc-text">补充舵面操纵原理</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">21.</span> <span class="toc-text">五、固定翼无人机的飞行阻力</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#5-1-%E9%99%84%E9%9D%A2%E5%B1%82%E5%9F%BA%E7%A1%80-2"><span class="toc-number">21.1.</span> <span class="toc-text">5.1 附面层基础</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-2-%E5%9B%9B%E5%A4%A7%E5%9F%BA%E7%A1%80%E9%98%BB%E5%8A%9B%E7%B1%BB%E5%9E%8B-2"><span class="toc-number">21.2.</span> <span class="toc-text">5.2 四大基础阻力类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-3-%E9%98%BB%E5%8A%9B%E5%A4%A7%E7%B1%BB%E5%88%92%E5%88%86%E4%B8%8E%E9%80%9F%E5%BA%A6%E5%8F%98%E5%8C%96%E8%A7%84%E5%BE%8B-2"><span class="toc-number">21.3.</span> <span class="toc-text">5.3 阻力大类划分与速度变化规律</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-4-%E9%92%88%E5%AF%B9%E6%80%A7%E5%87%8F%E9%98%BB%E6%8E%AA%E6%96%BD%E3%80%90%E8%83%8C%E8%AF%B5%E3%80%91-2"><span class="toc-number">21.4.</span> <span class="toc-text">5.4 针对性减阻措施【背诵】</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">22.</span> <span class="toc-text">六、固定翼无人机低速空气动力性能</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#6-1-%E5%8D%87%E5%8A%9B%E6%A0%B8%E5%BF%83%E5%BD%B1%E5%93%8D%E5%9B%A0%E7%B4%A0-2"><span class="toc-number">22.1.</span> <span class="toc-text">6.1 升力核心影响因素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-2-%E8%BF%8E%E8%A7%92%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5%E3%80%90%E5%BF%85%E8%80%83%E3%80%91-2"><span class="toc-number">22.2.</span> <span class="toc-text">6.2 迎角核心概念【必考】</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-3-%E5%A4%B1%E9%80%9F%E9%80%9F%E5%BA%A6%E3%80%90CAAC%E5%BF%85%E8%80%83%E8%A1%A5%E5%85%85%E3%80%91-2"><span class="toc-number">22.3.</span> <span class="toc-text">6.3 失速速度【CAAC必考补充】</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-4-%E9%98%BB%E5%8A%9B%E7%B3%BB%E6%95%B0%E6%9B%B2%E7%BA%BF%E8%A7%84%E5%BE%8B-2"><span class="toc-number">22.4.</span> <span class="toc-text">6.4 阻力系数曲线规律</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-5-%E5%8D%87%E9%98%BB%E6%AF%94%E3%80%90%E6%A0%B8%E5%BF%83%E8%80%83%E7%82%B9%E3%80%91-2"><span class="toc-number">22.5.</span> <span class="toc-text">6.5 升阻比【核心考点】</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B0%94%E5%8A%A8%E6%9E%81%E6%9B%B2%E7%BA%BF%E3%80%90CAAC%E9%9A%BE%E7%82%B9%E8%80%83%E7%82%B9%E3%80%91-2"><span class="toc-number">22.5.1.</span> <span class="toc-text">气动极曲线【CAAC难点考点】</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">23.</span> <span class="toc-text">七、固定翼无人机重心与操纵力矩</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#7-1-%E9%87%8D%E5%BF%83%E6%A0%B8%E5%BF%83%E5%AE%9A%E4%B9%89-2"><span class="toc-number">23.1.</span> <span class="toc-text">7.1 重心核心定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-2-%E4%B8%89%E5%A4%A7%E6%93%8D%E7%BA%B5%E5%8A%9B%E7%9F%A9%E4%B8%8E%E5%AF%B9%E5%BA%94%E8%88%B5%E9%9D%A2-2"><span class="toc-number">23.2.</span> <span class="toc-text">7.2 三大操纵力矩与对应舵面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-3-%E9%87%8D%E5%BF%83%E5%89%8D%E5%90%8E%E9%99%90%E3%80%90%E8%A1%A5%E5%85%85%E5%BF%85%E8%80%83%E8%80%83%E7%82%B9%E3%80%91-2"><span class="toc-number">23.3.</span> <span class="toc-text">7.3 重心前后限【补充必考考点】</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">24.</span> <span class="toc-text">八、固定翼无人机的平衡与稳定性</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#8-1-%E9%A3%9E%E6%9C%BA%E5%B9%B3%E8%A1%A1%E6%A0%B8%E5%BF%83%E6%9D%A1%E4%BB%B6-2"><span class="toc-number">24.1.</span> <span class="toc-text">8.1 飞机平衡核心条件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-2-%E4%BF%AF%E4%BB%B0%E5%B9%B3%E8%A1%A1%EF%BC%88%E7%BA%B5%E5%90%91%E5%B9%B3%E8%A1%A1%EF%BC%89%E4%B8%89%E7%A7%8D%E7%8A%B6%E6%80%81-2"><span class="toc-number">24.2.</span> <span class="toc-text">8.2 俯仰平衡（纵向平衡）三种状态</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-3-%E6%96%B9%E5%90%91%E5%B9%B3%E8%A1%A1%EF%BC%88%E8%88%AA%E5%90%91%E5%B9%B3%E8%A1%A1-%E7%AB%8B%E8%BD%B4%EF%BC%89-2"><span class="toc-number">24.3.</span> <span class="toc-text">8.3 方向平衡（航向平衡&#x2F;立轴）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-4-%E6%A8%AA%E5%90%91%E5%B9%B3%E8%A1%A1%EF%BC%88%E6%A8%AA%E6%BB%9A%E5%B9%B3%E8%A1%A1-%E7%BA%B5%E8%BD%B4%EF%BC%89-2"><span class="toc-number">24.4.</span> <span class="toc-text">8.4 横向平衡（横滚平衡&#x2F;纵轴）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-5-%E9%9D%99%E7%A8%B3%E5%AE%9A%E6%80%A7%E4%B8%8E%E5%8A%A8%E7%A8%B3%E5%AE%9A%E6%80%A7%E3%80%90%E8%A1%A5%E5%85%85%E8%80%83%E7%82%B9%E3%80%91-2"><span class="toc-number">24.5.</span> <span class="toc-text">8.5 静稳定性与动稳定性【补充考点】</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-6-%E7%BA%B5%E5%90%91%E7%A8%B3%E5%AE%9A%E6%80%A7%E6%A0%B8%E5%BF%83%E8%A7%84%E5%BE%8B%E3%80%90%E5%BF%85%E8%80%83%E5%8F%A3%E8%AF%80%E3%80%91-2"><span class="toc-number">24.6.</span> <span class="toc-text">8.6 纵向稳定性核心规律【必考口诀】</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">25.</span> <span class="toc-text">九、三轴阻尼力矩核心考点</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#9-1-%E4%B8%89%E8%BD%B4%E4%B8%8E%E9%98%BB%E5%B0%BC%E5%AF%B9%E5%BA%94%E5%85%B3%E7%B3%BB%E3%80%90%E5%BF%85%E8%83%8C%E3%80%91-2"><span class="toc-number">25.1.</span> <span class="toc-text">9.1 三轴与阻尼对应关系【必背】</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-2-%E9%98%BB%E5%B0%BC%E5%8A%9B%E7%9F%A9%E6%A0%B8%E5%BF%83%E6%9D%A5%E6%BA%90%E3%80%90%E6%BB%A1%E5%88%86%E8%80%83%E7%82%B9%E3%80%91-2"><span class="toc-number">25.2.</span> <span class="toc-text">9.2 阻尼力矩核心来源【满分考点】</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-3-%E6%A0%B8%E5%BF%83%E4%BD%9C%E7%94%A8%E5%8E%9F%E7%90%86-2"><span class="toc-number">25.3.</span> <span class="toc-text">9.3 核心作用原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-4-%E8%AE%B0%E5%BF%86%E5%8F%A3%E8%AF%80-2"><span class="toc-number">25.4.</span> <span class="toc-text">9.4 记忆口诀</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">26.</span> <span class="toc-text">十、迎角与压力中心、气动焦点</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#10-1-%E6%A0%B8%E5%BF%83%E7%BB%93%E8%AE%BA%E3%80%90%E8%80%83%E8%AF%95%E5%BF%85%E8%83%8C%E3%80%91-2"><span class="toc-number">26.1.</span> <span class="toc-text">10.1 核心结论【考试必背】</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-2-%E5%8E%9F%E7%90%86%E9%80%9A%E4%BF%97%E7%90%86%E8%A7%A3-2"><span class="toc-number">26.2.</span> <span class="toc-text">10.2 原理通俗理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-3-%E6%98%93%E6%B7%B7%E6%A6%82%E5%BF%B5%E6%A0%B8%E5%BF%83%E5%8C%BA%E5%88%86%E3%80%90%E9%AB%98%E9%A2%91%E6%98%93%E9%94%99%E3%80%91-2"><span class="toc-number">26.3.</span> <span class="toc-text">10.3 易混概念核心区分【高频易错】</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-4-%E8%AE%B0%E5%BF%86%E5%8F%A3%E8%AF%80-2"><span class="toc-number">26.4.</span> <span class="toc-text">10.4 记忆口诀</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">27.</span> <span class="toc-text">十一、机翼关键角度与侧滑操纵考点</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#11-1-%E6%9C%BA%E7%BF%BC%E5%85%B3%E9%94%AE%E8%A7%92%E5%BA%A6%E5%AE%9A%E4%B9%89%E3%80%90%E5%9F%BA%E7%A1%80%E8%80%83%E7%82%B9%E3%80%91-2"><span class="toc-number">27.1.</span> <span class="toc-text">11.1 机翼关键角度定义【基础考点】</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-2-%E6%A8%AA%E5%90%91%E9%9D%99%E7%A8%B3%E5%AE%9A%E6%80%A7%E6%A0%B8%E5%BF%83%E6%9D%A5%E6%BA%90%E3%80%90%E4%BF%AE%E6%AD%A3%E5%8E%9F%E7%9F%A5%E8%AF%86%E7%82%B9%E5%81%8F%E5%B7%AE%E3%80%91-2"><span class="toc-number">27.2.</span> <span class="toc-text">11.2 横向静稳定性核心来源【修正原知识点偏差】</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-3-%E4%BE%A7%E6%BB%91%E7%9B%B8%E5%85%B3%E6%A0%B8%E5%BF%83%E8%80%83%E7%82%B9%E3%80%90%E5%BF%85%E8%80%83%C2%B7%E4%BF%AE%E6%AD%A3%E5%8E%9F%E7%9F%A5%E8%AF%86%E7%82%B9%E5%81%8F%E5%B7%AE%E3%80%91-2"><span class="toc-number">27.3.</span> <span class="toc-text">11.3 侧滑相关核心考点【必考·修正原知识点偏差】</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-4-%E9%A3%9E%E8%A1%8C%E6%93%8D%E7%BA%B5%E5%AE%9E%E6%93%8D%E8%80%83%E7%82%B9-2"><span class="toc-number">27.4.</span> <span class="toc-text">11.4 飞行操纵实操考点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-5-%E4%B8%89%E8%BD%B4%E7%A8%B3%E5%AE%9A%E6%80%A7%E6%A0%B8%E5%BF%83%E8%A7%84%E5%BE%8B%E3%80%90%E6%A0%B8%E5%BF%83%E5%BF%85%E8%80%83%E3%80%91-2"><span class="toc-number">27.5.</span> <span class="toc-text">11.5 三轴稳定性核心规律【核心必考】</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#11-5-1-%E4%B8%89%E8%BD%B4%E4%B8%8E%E7%A8%B3%E5%AE%9A%E6%80%A7%E5%AF%B9%E5%BA%94%E5%85%B3%E7%B3%BB%E3%80%90%E5%BF%85%E8%83%8C%E3%80%91-2"><span class="toc-number">27.5.1.</span> <span class="toc-text">11.5.1 三轴与稳定性对应关系【必背】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-5-2-%E7%A8%B3%E5%AE%9A%E6%80%A7%E6%A0%B8%E5%BF%83%E5%AE%9A%E4%B9%89-2"><span class="toc-number">27.5.2.</span> <span class="toc-text">11.5.2 稳定性核心定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-5-3-%E7%A8%B3%E5%AE%9A%E6%80%A7%E5%85%B3%E8%81%94%E5%85%B3%E7%B3%BB-2"><span class="toc-number">27.5.3.</span> <span class="toc-text">11.5.3 稳定性关联关系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-5-4-%E7%A8%B3%E5%AE%9A%E6%80%A7%E6%A0%B8%E5%BF%83%E5%BD%B1%E5%93%8D%E5%9B%A0%E7%B4%A0-2"><span class="toc-number">27.5.4.</span> <span class="toc-text">11.5.4 稳定性核心影响因素</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-6-%E5%BF%85%E8%83%8C%E4%B8%89%E5%A4%A7%E5%8F%A3%E8%AF%80-2"><span class="toc-number">27.6.</span> <span class="toc-text">11.6 必背三大口诀</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">28.</span> <span class="toc-text">十二、荷兰滚与螺旋不稳定</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">29.</span> <span class="toc-text">十三、地面效应</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#13-1-%E6%A0%B8%E5%BF%83%E5%AE%9A%E4%B9%89-2"><span class="toc-number">29.1.</span> <span class="toc-text">13.1 核心定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-2-%E4%BA%A7%E7%94%9F%E5%8E%9F%E7%90%86-2"><span class="toc-number">29.2.</span> <span class="toc-text">13.2 产生原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-3-%E5%9C%B0%E9%9D%A2%E6%95%88%E5%BA%94%E6%A0%B8%E5%BF%83%E5%8F%98%E5%8C%96%E4%B8%8E%E5%AE%9E%E6%93%8D%E5%BD%B1%E5%93%8D%E3%80%90CAAC%E5%BF%85%E8%80%83%E3%80%91-2"><span class="toc-number">29.3.</span> <span class="toc-text">13.3 地面效应核心变化与实操影响【CAAC必考】</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">30.</span> <span class="toc-text">十四、翼型三个关键位置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">31.</span> <span class="toc-text">十五、诱导阻力考点全解析</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#15-1-%E6%A0%B8%E5%BF%83%E5%AE%9A%E4%B9%89-2"><span class="toc-number">31.1.</span> <span class="toc-text">15.1 核心定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-2-%E4%BA%A7%E7%94%9F%E5%8E%9F%E7%90%86-2"><span class="toc-number">31.2.</span> <span class="toc-text">15.2 产生原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-3-%E6%A0%B8%E5%BF%83%E5%BD%B1%E5%93%8D%E5%9B%A0%E7%B4%A0-2"><span class="toc-number">31.3.</span> <span class="toc-text">15.3 核心影响因素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-4-%E6%A0%B8%E5%BF%83%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF-2"><span class="toc-number">31.4.</span> <span class="toc-text">15.4 核心应用场景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-5-%E6%A0%B8%E5%BF%83%E5%87%8F%E9%98%BB%E6%96%B9%E6%B3%95-2"><span class="toc-number">31.5.</span> <span class="toc-text">15.5 核心减阻方法</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">32.</span> <span class="toc-text">十六、下滑有利速度考点版</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#16-1-%E6%A0%B8%E5%BF%83%E5%AE%9A%E4%B9%89-2"><span class="toc-number">32.1.</span> <span class="toc-text">16.1 核心定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16-2-%E6%A0%B8%E5%BF%83%E5%8E%9F%E7%90%86-2"><span class="toc-number">32.2.</span> <span class="toc-text">16.2 核心原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16-3-%E6%A0%B8%E5%BF%83%E8%80%83%E7%82%B9-2"><span class="toc-number">32.3.</span> <span class="toc-text">16.3 核心考点</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/dd8b8ec9/" title="无人机飞行原理核心知识点（CAAC执照备考）">无人机飞行原理核心知识点（CAAC执照备考）</a><time datetime="2026-04-28T12:38:27.000Z" title="发表于 2026-04-28 20:38:27">2026-04-28</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By 柒柒昱</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.4</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><div class="js-pjax"><script>(() => {
+  const loadMathjax = () => {
+    if (!window.MathJax) {
+      window.MathJax = {
+        loader: {
+          load: [
+            // Four font extension packages (optional)
+            //- '[tex]/bbm',
+            //- '[tex]/bboldx',
+            //- '[tex]/dsfont',
+            '[tex]/mhchem'
+          ],
+          paths: {
+            'mathjax-newcm': '[mathjax]/../@mathjax/mathjax-newcm-font',
+
+            //- // Four font extension packages (optional)
+            //- 'mathjax-bbm-extension': '[mathjax]/../@mathjax/mathjax-bbm-font-extension',
+            //- 'mathjax-bboldx-extension': '[mathjax]/../@mathjax/mathjax-bboldx-font-extension',
+            //- 'mathjax-dsfont-extension': '[mathjax]/../@mathjax/mathjax-dsfont-font-extension',
+            'mathjax-mhchem-extension': '[mathjax]/../@mathjax/mathjax-mhchem-font-extension'
+          }
+        },
+        output: {
+          font: 'mathjax-newcm',
+        },
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          tags: 'none',
+          packages: {
+            '[+]': [
+              'mhchem'
+            ]
+          }
+        },
+        chtml: {
+          scale: 1.1
+        },
+        options: {
+          enableMenu: false,
+          menuOptions: {
+            settings: {
+              enrich: false  // Turn off Braille and voice narration text automatic generation
+            }
+          },
+          renderActions: {
+            findScript: [10, doc => {
+              for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+                const display = !!node.type.match(/; *mode=display/)
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+                const text = document.createTextNode('')
+                node.parentNode.replaceChild(text, node)
+                math.start = {node: text, delim: '', n: 0}
+                math.end = {node: text, delim: '', n: 0}
+                doc.math.push(math)
+              }
+            }, '']
+          }
+        }
+      }
+
+      const script = document.createElement('script')
+      script.src = 'https://cdn.jsdelivr.net/npm/mathjax@4.1.0/tex-mml-chtml.min.js'
+      script.id = 'MathJax-script'
+      script.async = true
+      document.head.appendChild(script)
+    } else {
+      MathJax.startup.document.state(0)
+      MathJax.texReset()
+      MathJax.typesetPromise()
+    }
+  }
+
+  btf.addGlobalFn('encrypt', loadMathjax, 'mathjax')
+  window.pjax ? loadMathjax() : window.addEventListener('load', loadMathjax)
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
